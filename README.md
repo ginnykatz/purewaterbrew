@@ -5,16 +5,18 @@ Water Brew Challenge to create a shift in Mindset”
  
 
 **Group members**
-Ginny Katz
-Courtney Van Stolk
-Aradia Farmer
+Ginny Katz,
+
+Courtney Van Stolk,
+Aradia Farmer,
 
 **Supporting contributors**
-Rick Debbout
-Brian Katz
-Chunxue Xu 
+Rick Debbout,
+Brian Katz,
+Chunxue Xu ,
 Giovanni Svevo
-Client 
+
+**Client** 
 Clean Water Services, Hillsboro Oregon 
 
 **Project Deadlines**
