@@ -9,7 +9,9 @@ Water Brew Challenge to create a shift in Mindset”
 
 Ginny Katz,
 Courtney Van Stolk,
-Aradia Farmer,
+Aradia Farmer
+
+
 
 **Supporting contributors**
 
@@ -18,10 +20,17 @@ Brian Katz,
 Chunxue Xu ,
 Giovanni Svevo
 
+
+
 **Client**:
+
 Clean Water Services, Hillsboro Oregon 
 
+
+
 **Project Deadlines**
+
+
 Mock up: By 4/4/18
 
 Presentation to CWS for feedback opportunity : May 25th
@@ -29,6 +38,8 @@ Presentation to CWS for feedback opportunity : May 25th
 Project Soft Deadline : June 20th
 
 Project Hard Deadline: June 25th 8:00 am 
+
+
 
 
 
@@ -41,6 +52,8 @@ Water Services in Hillsboro Oregon, this engagement tool will be used as present
 support in the International Singapore Water Week 2018 and will further serve
 as a website extension for the Clean Water Services Website. 
 
+
+
 **Project Description**
 
 
@@ -50,7 +63,7 @@ videos, images, graphic design, D3 Geovisual analytics (Heatmaps, Twitter Word
 Clouds, Hexagonal Cholopleth Map). These charts and data displays will mainly
 focus on the changing conversation surrounding Pure Water Brew and water reuse.
 
- 
+
 
 **Data links and places to find the data**
 
