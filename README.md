@@ -32,7 +32,7 @@ Clean Water Services, Hillsboro Oregon
 **Project Deadlines**
 
 
-Mock up: By 4/4/18
+Mock up: By May 4, 2018
 
 Presentation to CWS for feedback opportunity : May 25th
 
