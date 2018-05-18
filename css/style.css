@@ -1,0 +1,120 @@
+.storymap-progressline {
+    background: #007CCF !important;
+    box-shadow: #042847 !important;
+}
+
+nav {
+    height: 46px !important;
+}
+
+
+#chart {
+    max-width: 600px;
+    max-height: 400px;
+}
+
+
+.sm-middle {
+    margin-top: 20%
+}
+
+
+/*.bg-darkblue {*/
+    /*background-color: #0092bc; }*/
+
+
+#mymap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+
+#mymap2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+#date-chart {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.neg-term {
+
+    color: red;
+    /*font-weight: bold;*/
+}
+.pos-term {
+
+    color: deepskyblue;
+    /*font-weight: bold;*/
+}
+.date {
+
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+
+#worduniverse {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "Roboto", "San Francisco";
+}
+
+
+#network {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "Roboto", "San Francisco";
+}
+
+
+
+
+
+.flashit{
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 1s infinite;
+}
+@-webkit-keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: .1; }
+    100% { opacity: 1; }
+}
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: .1; }
+    100% { opacity: 1; }
+}

@@ -1,0 +1,44 @@
+   var width = 960,
+    height = 600;
+
+    var radius = height / 2 - 5,
+    scale = radius,
+    velocity = .02;
+
+    var projection = d3.geoOrthographic()
+    .translate([width / 2, height / 2])
+    .scale(scale)
+    .clipAngle(90);
+
+    var canvas = d3.select("body").append("canvas")
+    .attr("width", width)
+    .attr("height", height);
+
+    var context = canvas.node().getContext("2d");
+
+    var path = d3.geoPath()
+    .projection(projection)
+    .context(context);
+
+    d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/world-110m.json", function(error, world)
+    {
+    if (error) throw error;
+
+    var land = topojson.feature(world, world.objects.land);
+
+    d3.timer(function(elapsed) {
+    context.clearRect(0, 0, width, height);
+
+    projection.rotate([velocity * elapsed, 0]);
+    context.beginPath();
+    path(land);
+    context.fill();
+
+    context.beginPath();
+    context.arc(width / 2, height / 2, radius, 0, 2 * Math.PI, true);
+    context.lineWidth = 2.5;
+    context.stroke();
+});
+});
+
+    d3.select(self.frameElement).style("height", height + "px");

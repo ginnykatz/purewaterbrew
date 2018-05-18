@@ -95,3 +95,7 @@ http://storymap.genesisofexodusfilm.com/index.html
 Design goals will utilize the Pure Water Brew logo color scheme, also featured in their website : https://www.purewaterbrew.org/
 
 The interface intends to be engaging, educational, and approachable with the underlying essence of Pure Water Brew design. 
+
+
+
+![storyline](img/story-overview.png)

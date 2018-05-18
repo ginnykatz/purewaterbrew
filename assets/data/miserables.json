@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {"id": 1, "name": "Pure Water Brew", "group": 1},
+    {"id": 2, "name": "Cascade Breew", "group": 2},
+    {"id": 3, "name": "Oregon Brew Crew", "group": 2},
+    {"id": 4, "name": "Rogue", "group": 2},
+    {"id": 5, "name": "Green Dragon", "group": 2},
+    {"id": 6, "name": "Mepolanders", "group": 3},
+    {"id": 7, "name": "Jon Larson", "group": 3},
+    {"id": 8, "name": "Steve Wood", "group": 3}
+  ],
+  "links": [
+    {"source": 1, "target": 2, "value": 1},
+    {"source": 1, "target": 3, "value": 1},
+    {"source": 1, "target": 4, "value": 1},
+    {"source": 1, "target": 5, "value": 1},
+    {"source": 1, "target": 6, "value": 1},
+    {"source": 1, "target": 7, "value": 1},
+    {"source": 1, "target": 8, "value": 1},
+    {"source": 2, "target": 3, "value": 1},
+    {"source": 2, "target": 4, "value": 1},
+    {"source": 2, "target": 5, "value": 1},
+    {"source": 2, "target": 6, "value": 1},
+    {"source": 3, "target": 4, "value": 1},
+    {"source": 4, "target": 8, "value": 1}
+
+
+  ]
+}
