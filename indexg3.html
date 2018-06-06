@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pure Water Brew</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="please add">
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">-->
+    <!-- Google Fonts -->
+    <link href="css/google-fonts.css" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
+    <link rel="stylesheet" href="css/all.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css">-->
+    <link rel="stylesheet" href="css/leaflet.css">
+    <!--additional fine tune styling-->
+    <link rel="stylesheet" href="css/ginny.css">
+
+
+
+    <!-- Mapbox GL -->
+    <link  rel='stylesheet' href="css/mapbox-gl.css"/>
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+
+    <link rel="shortcut icon" href="img/new-logo.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="img/new-logo.png">
+
+    <!-- Android -->
+    <script src="js/starfield.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/proj4.js"></script>
+    <script src="js/proj4leaflet.min.js"></script>
+
+    <script src="js/leaflet.ajax.min.js"></script>
+
+    <script src="js/mapbox-gl.js"></script>
+
+    <script src="js/leaflet-mapbox-gl.js"></script>
+
+
+    <script src="js/jquery.min.js"></script>
+
+
+    <!-- Load d3.js -->
+    <script src="js/d3.v5.min.js"></script>
+
+    <!-- Load billboard.js -->
+    <link rel="stylesheet" type="text/css" href="css/billboard.min.css" />
+    <script src="js/billboard.min.js"></script>
+
+
+    <script src="js/chroma.min.js"></script>
+    <script src="js/webslides.min.js"></script>
+    <script src="js/Leaflet.SwoopyArrow-customized.js"></script>
+    <script src="assets/data/kits.js"></script>
+    <script src="assets/data/media.js"></script>
+    <script src="assets/data/lake.js"></script>
+</head>
+<body>
+<header role="banner">
+    <nav role="navigation">
+        <span class="logo"><a href="index.html" title="Pure Water Brew"> Pure Water Brew</a></span>
+        <ul>
+            <li>
+                <a  href="index.html" title="English">
+               EN
+            </a>
+            </li>
+            <li>
+                <a>|</a>
+            </li>
+            <li>
+                <a  href="index2.html" title="中文">
+                    中文
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main role="main">
+    <article id="webslides">
+        <!--1.Landing-->
+        <section class="bg-apple">
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/open-pics.mp4" type="video/mp4">
+            </video>
+            <div class="wrap aligncenter">
+                <h1>
+                    <strong>Changing Conversations, Changing Minds</strong>
+                </h1>
+                <p class="text-symbols">* * * </p>
+                <p><a href="https://twitter.com/cleanwaternews?lang=en"
+                      title="Diane Taniguchi-Dennis, Clean Water Services"></a>
+                    <!--<img class="avatar-64 img-thumbnail" src="img/taniguchi-dennis.jpg" alt="Diane Taniguchi-Dennis, Clean Water Services"></a> -->
+                    Diane Taniguchi-Dennis · Deputy General Manager · Clean Water Services </p>
+            </div>
+
+        </section>
+        <!--2. intro -->
+        <section class="bg-apple slide-top">
+            <div id="mymap"></div>
+            <!--To add a title tp the images-->
+            <!--<div class="wrap fadeInUp bg-trans-light aligncenter size-30">-->
+                <!--<h2>Where we are</h2>-->
+            <!--</div>-->
+        </section>
+
+        <!--fade into WA county urbanization-->
+        <section class="bg-apple slide-top">
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/intro.mp4" type="video/mp4">
+            </video>
+            <!--<div class="wrap bg-trans-light aligncenter size-30">-->
+                <!--<h2>Who we are</h2>-->
+            <!--</div>-->
+        </section>
+
+        <!--3.Innovation due to Pressure-->
+        <section class="fullscreen bg-apple">
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/innovate.mp4" type="video/mp4">
+            </video>
+            <div class="wrap"><h1>Preparing for the New Normal</h1></div>
+        </section>
+
+        <!--&lt;!&ndash;4. Leader & Catalyst to a water smart society*****ADD HAGG LAKE DATA VIZ******&ndash;&gt;-->
+        <!--<section class="bg-apple aligncenter">-->
+            <!--<span class="background anim" style="background-image:url('assets/hagg_lake.jpg')"></span>-->
+            <!--&lt;!&ndash;.wrap = container (width: 90%) &ndash;&gt;-->
+            <!--<div class="wrap size-50">-->
+                <!--<h2 class="align-left">Looking ahead, Leading the way</h2>-->
+                <!--<br/> <br/> <br/> <br/> <br/>-->
+                <!--<img src="assets/data/cws-hagg-data.png">-->
+            <!--</div>-->
+            <!--&lt;!&ndash; .end .wrap &ndash;&gt;-->
+        <!--</section>-->
+
+        <!--4. Leader & Catalyst to a water smart society*****ADD HAGG LAKE DATA VIZ******-->
+        <section class="bg-apple aligncenter">
+            <div class="wrap size-70">
+                <h2>Water Supplies in an Uncertain Climate</h2>
+                <br/> <br/> <br/> <br/> <br/>
+                <div id="chart" class="aligncenter"></div>
+
+            </div>
+
+
+            <!-- .end .wrap -->
+        </section>
+        <!--5.CLIMAX Nature's Silent call for water action  -->
+
+        </section>
+        <!--helper for climax--->
+        <!--<section class="bg-apple">-->
+        <!--<div class="wrap">-->
+            <!--<div class="content-left">-->
+                <!--<h3>Heeding Nature's Silent Call:</h3>-->
+                <!--<p>Innovating with Water Reuse</p>-->
+                <!--<pre><p >The Virginia Rail and American Bittern</p>-->
+                                <!--<p>Photo taken at Fernhill Natural Treatment System</p></pre>-->
+
+            <!--</div>-->
+            <!--&lt;!&ndash; end .content-left &ndash;&gt;-->
+            <!--<div class="content-left">-->
+                <!--&lt;!&ndash; <div class="embed"> = Responsive &ndash;&gt;-->
+                <!--<div class="embed">-->
+                    <!--<iframe src="assets/birds2.mp4" ></iframe>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; end .embed &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; end .content-left &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; .end .wrap &ndash;&gt;-->
+        <!--</section>-->
+
+
+        <section class="bg-apple">
+            <div class="wrap">
+
+
+                <div class="grid vertical-align">
+                    <div class="column">
+                        <ul class="flexblock specs">
+                            <li>
+                                <div>
+                                    <h1>Heeding Nature's Silent Call:</h1>
+                                    <h2>Innovating with Water Reuse</h2>
+                                    <br>
+                                    <p >The Virginia Rail and American Bittern <br>Photos taken at Fernhill Natural Treatment System</p>
+                                </div>
+                            </li>
+                            <li>
+                                <!--<h2>Environment Protection Agency, U.S.A</h2>-->
+                                <!--<p> <img class="img-thumbnail" src="img/epa-seal.png"/>Pure Water Brew is an excellent example of our ability to take water that is otherwise thought of as waste and put it to direct positive value- as a beer.</p>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure>
+                            <div class="embed">
+                                <video autoplay loop muted poster="">
+                                    <source src="assets/birds2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+
+
+                <!-- .end card-50 -->
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+        <!--industry -->
+
+        <section class="bg-apple">
+            <!--.wrap = container (width: 90%) -->
+            <div class="wrap alignleft">
+                <ul class="flexblock ">
+                    <li>
+                <blockquote class="text-quote">
+                    <p>Quote from Slovic about the positive impact </p>
+                    <p><cite><img class="avatar-56" src="img/slovic.jpg" alt="Avatar">Paul Slovic </cite></p>
+                </blockquote>
+                    </li>
+                    <li>
+                <blockquote class="text-quote">
+                    <p>Need to get exact quote for Linda, will have to check with Emily where it is. </p>
+                    <p><cite><img class="avatar-56" src="img/mcpherson.jpg" alt="Avatar">Linda Macpherson</cite></p>
+                </blockquote>
+                    </li>
+                </ul>
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+
+
+
+
+        <!--Window of discourse-->
+
+        <section class="bg-apple">
+            <div class="wrap aligncenter ">">
+
+                <h2>Window of Discourse</h2>
+
+                <p>The Overton Window <br>Joseph P. Overton</p>
+
+                <ul class="flexblock features">
+                    <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
+                    <li>
+                        <div class="process step-1"></div>
+                        <span>
+                  <img src="assets/storyline/act2/filtration/tap.png"/>
+                </span>
+                        <h2>Unthinkable</h2>
+                        <!--<p>Physical base of our purification process</p>-->
+                    </li>
+                    <li>
+                        <div class="process step-2"></div>
+                        <span>
+                            <!--<div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+                            <img src="assets/storyline/act2/filtration/manometer.png" />
+                </span>
+                        <h2>Radical</h2>
+                        <!--<p>Flow and quality monitoring</p>-->
+                    </li>
+                    <li>
+                        <div class="process step-3"></div>
+                        <span>
+                  <i class="fas fa-comments">
+                  </i>
+                </span>
+
+                        <h2>Acceptable</h2>
+                        <!--<p>Transmitting real-time data</p>-->
+                    </li>
+                    <li>
+                        <div class="process step-4"></div>
+                        <span>
+                 <img src="assets/storyline/act2/filtration/data-vis.png"/>
+                </span>
+
+                        <h2>Sensible</h2>
+                        <!--<p>Software that visualizes our water data</p>-->
+                        <!--<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+                    </li>
+                    <li>
+                        <div class="process step-5"></div>
+                        <span>
+                  <i class="fab fa-wikipedia-w">
+                  </i>
+                </span>
+
+                        <h2>Popular</h2>
+                        <!--<p>Objective dashboard for public review and education</p>-->
+                    </li>
+                    <li>
+                        <div class="process step-6"></div>
+                        <span>
+                 <img src="assets/storyline/act2/filtration/data-vis.png"/>
+                </span>
+
+                        <h2>Good Public Policy</h2>
+                        <!--<p>Software that visualizes our water data</p>-->
+                        <!--<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+                    </li>
+                </ul>
+                <div class="wrap">
+                    <blockquote class="text-quote">
+                        <p>“Provide information that is interesting and engaging and is simple enough to understand but technical enough to trust.”</p>
+                        <p><cite><a href="https://en.wikipedia.org/wiki/Buckminster_Fuller"> Talking About Water, 71 </a></cite></p>
+                    </blockquote>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!--8.Verbiage What we we said, ADD WORDUNIVERSE 1 -->
+
+        <section class="bg-apple">
+            <div id="worduniverse"></div>
+            <div class=" fadeInUp slide-top content-left size-30">
+                <h2>The Message sent</h2>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+            <div class="ginny content-center slide-top bg-trans-light" style="position:absolute;top:65px;left:10px;">
+                <p><span class="pos-term">Unthinkable </span>   &ndash;&gt; Radical --> Acceptable &ndash;&gt; Sensible &ndash;&gt; Popular --> Good Public Policy</p>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+
+        <!--7.ART+ Beer, I think yes**More Brewer footage***-->
+
+        <section class="bg-apple">
+
+
+            <video class="background-video dark" autoplay loop>
+                <source src="assets/i-think-yes.mp4" type="video/mp4">
+            </video>
+            <
+            <div class="wrap align-left fadeInUp">
+                <h2><strong>Beer?<br>I think, yes!</strong></h2>
+
+            </div>
+            <div class="slide-bottom" style="position:absolute; bottom:10px; right:20px">
+                <h3 class= "content-right"> Bill Gaffi, P.E. · General Manager of Clean Water Services  Executive Director of the Clean Water Institute </h3>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+                <h3 class= "content-right"> Art Larrance · Cascade Brewing, Co-Founder & CEO</h3>
+            </div>
+
+            <div class="ginny bg-trans-light content-center slide-top" style="position:absolute;top:65px;">
+                <p>Unthinkable --> <span class="pos-term">Radical</span> --> Acceptable --> Sensible --> Popular --> Good Public Policy</p>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+        </section>
+
+
+        <!--9.Sending the message-->
+
+        <section class="bg-apple slide-top">
+            <div id="mymap2"></div>
+            <div class="wrap fadeInUp bg-trans-light aligncenter size-30">
+                <h2>Sending the Message</h2>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+            <div class="ginny content-center slide-top" style="position:absolute;top:65px;left:10px;">
+                <p>Unthinkable &ndash;&gt; Radical &ndash;&gt;<span class="pos-term"> Acceptable</span> &ndash;&gt; Sensible &ndash;&gt; Popular --> Good Public Policy</p>
+            <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+            <!--<img src="img/kit.gif">-->
+            </div>
+        </section>
+
+        <!--12.Media Conversation growth timeline -->
+        <section class="fullscreen bg-apple">
+            <!--<div class="card-70">-->
+            <!--<figure>-->
+            <div class="card-60">
+                <figure>
+                    <div id="mymap4"></div>
+                </figure>
+                <div class="flex-content content-center">
+                    <h4 class="content-center"><strong>The Growing Conversation</strong></h4>
+                    <p></p>
+                    <li>Pure Water Brew </li>
+                    <li>Quality, not history</li>
+                    <li>Water purification</li>
+                    <li>Proven technologies</li>
+                    <li>Sewage to brewage</li>
+                    <li>Solve water shortages</li>
+                    <li>Purification technique</li>
+                    <li>High purity water system</li>
+                    <li>Most pure water on the planet</li>
+                    <li>beyond drinking water standards</li>
+                    <li>Innovative solutions to water resuse</li>
+                    <li>All water we drink has at one point been consumed – and will be consumed again</li>
+                    <p class="text-symbols content-center">* * *</p>
+                </div>
+                <div class="ginny content-center slide-top" style="position:absolute;top:65px;">
+                    <p>Unthinkable --> Radical --><span class="pos-term"> Acceptable </span>  --> Sensible--> Popular --> Good Public Policy</p>
+                    <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                    <!--<img src="img/kit.gif">-->
+                </div>
+            </div>
+
+
+        </section>
+        <!--6.Bill-->
+        <section class="bg-apple">
+            <div class="ginny content-center slide-top" style="position:absolute;top:65px;">
+                <p>Unthinkable --> Radical -->  Acceptable --><span class="pos-term"> Sensible</span> --> Popular --> Good Public Policy</p>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+            <span class="background-left-bottom" style="background-image:url('img/bill-can.png')"></span>
+            <div class="wrap">
+                <div class="content-right">
+                    <blockquote class="text-quote">
+                        <p>The only thing <strong><i>remarkable</i></strong> about it is that it isn't <strong><i>remarkable</i></strong> at all.</p>
+                        <cite>Bill Gaffi, P.E. · General Manager of Clean Water Services · Executive Director of the Clean Water Institute</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!--HERE FOR THE TABLE FROM SLOVIC REPORT-->
+        <!--Should reflect word weight in Slovic’s Table III page 19
+
+Sewage
+Wastewater
+Purity
+Clean
+Safety
+Contaminated
+Gross
+Alarming
+Taste
+Pee
+Poo
+Toilet to tap
+Yuck
+Stinky
+Approval
+Recycled wastewater
+Recycled sewage
+Quality
+Allow
+Legal
+Hearing
+-->
+
+
+        <!--13. Verbiage WHAT WE LEARNED ***ADD WORDUNIVERSE 2****-->
+        <section class="bg-apple slide-bottom">
+            <div id="worduniverse2"></div>
+            <div class="wrap fadeInUp aligncenter size-30">
+                <h2>Positive words we got back </h2>
+            </div>
+            <div class="ginny content-center slide-top" style="position:absolute;top:65px;left:10px;">
+                <p>Unthinkable &ndash;&gt; Radical &ndash;&gt; Acceptable &ndash;&gt;<span class="pos-term"> Sensible</span> &ndash;&gt; Popular --> Good Public Policy</p>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+        </section>
+        
+        <!--10.Partnership  -->
+
+<!--Get Map working with title -->
+        <section class="bg-apple slide-top">
+            <div id="mymap3"></div>
+            <div class="wrap fadeInUp bg-trans-light aligncenter size-30">
+                <h2>Expanding Partnership</h2>
+                <h3 id="year_partners">2014</h3>
+            </div>
+            <div class="ginny content-center slide-top" style="position:absolute;top:65px;">
+                <p>Unthinkable --> Radical --> Acceptable --> Sensible --><span class="pos-term"> Popular </span> --> Good Public Policy</p>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+
+        </section>
+
+        <!--11. DEQ. Spark-->
+        <section class="bg-apple">
+            <div class="ginny content-center slide-top" style="position:absolute;top:65px;">
+                <p>Unthinkable --> Radical --> Acceptable --> Sensible --> Popular --> <span class="pos-term">Good Public Policy</span></p>
+                <!--<span class="background dark" style="background-image:url('img/kit.gif')"></span>-->
+                <!--<img src="img/kit.gif">-->
+            </div>
+            <div class="wrap">
+
+
+                <div class="grid vertical-align">
+                    <div class="column">
+                        <ul class="flexblock specs">
+                            <li>
+                                <div>
+                                    <h3>Department of Environmental Quality , State of Oregon </h3>
+                                    <p><img class="img-thumbnail" src="img/deq-logo.png">"Using recycled water will become increasingly important in our region as demands on our water resources increase."</p>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3>Environmental Protection Agency, United States</h3>
+                                <p> <img class="img-thumbnail" src="img/epa-seal.png"/>"Pure Water Brew is an excellent example of our ability to take water that is otherwise thought of as waste and put it to direct positive value- as a beer."</p>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure>
+                            <div class="embed">
+                                <video autoplay loop muted poster="">
+                                    <source src="assets/epa-interview2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <!-- .end card-50 -->
+            </div>
+            <!-- .end .wrap -->
+
+
+            <blockquote class="slide-bottom text-quote">
+                <p>There is no reason in the world to judge water by its <strong>history</strong>. <br> We are very much focused on what’s the <strong>quality</strong> of the water for the use to which it will be put. </p>
+                <p><cite>Ken Kopocis, EPA Deputy Administrator Office of Water (2015)</cite></p>
+            </blockquote>
+        </section>
+
+
+
+
+
+
+
+        <!--15.Beer Happy (WEFTEC FOOTAGE)-->
+        <section class="bg-apple">
+
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/brewer-details.mp4" type="video/mp4">
+            </video>
+            <div class="wrap alignleft fadeInUp">
+                <h2><strong>A Happy Experience</strong></h2>
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+        <!--16. Final thoughts- Andy Quote-->
+        <section>
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/watershed-beauty-shots.mp4" type="video/mp4">
+            </video>
+            <div class="wrap">
+                <div class="light-text slide-top  alignleft">
+                    <blockquote class="text-quote">
+                        <p>All water is reused.</p><p> Mother Nature knows that.</p>
+                        <cite> <img class="img-thumbnail avatar-64" src="img/dunyi.jpg">Andy Duyck · Clean Water Institute Chairman of the Board</cite>
+                    </blockquote>
+                </div>
+            </div>
+            <!-- end .flex-content-->
+        </section>
+
+        <!--17.Closing-->
+        <section class="bg-apple slide-bottom">
+
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/beer-invite.mp4" type="video/mp4">
+            </video>
+
+            <div class="wrap alignright fadeInUp">
+                <div class="content-right">
+                    <h2>
+                        <strong>Questions?</strong>
+                        <a target="_blank" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=share%20the%20story%20from%20CWS"><i class="fab fa-twitter"></i></a>
+
+                        <small><a href="https://twitter.com/CleanWaterNews">@CleanWaterNews</a></small>
+                    </h2>
+
+                    <p> <a href="https://twitter.com/cleanwaternews?lang=en" title="Diane Taniguchi-Dennis, Clean Water Services"> </a></p>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<footer>
+    <div class="wrap">
+
+            <!--<span class="alignright">-->
+                <!--<a href="https://www.cleanwaterservices.org/about-us/clean-water-institute/" title= "Clean Water Service"> <img class="white logo" src="img/logo-cws-white.png" alt="Clean Water Institute"></a>-->
+                <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+                <!--<a href="https://www.cleanwaterservices.org/about-us/clean-water-institute/" title= "Clean Water Institute"> <img class="white logo" src="img/cwi-white.png" alt="Clean Water Institute"></a>-->
+<!--&nbsp;&nbsp;              &nbsp;&nbsp;&nbsp;&nbsp;-->
+                <!--<a href="https://www.cleanwaterservices.org/about-us/clean-water-institute/" title= "SWII"> <img class="white logo" src="img/siww_logo-white.png" alt="SWII"></a>-->
+            <!--</span>-->
+
+    </div>
+</footer>
+<script>
+
+    mollweide = new L.Proj.CRS('ESRI:54009',
+        '+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs',
+        {
+            resolutions: [43690, 32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1] // example zoom level resolutions
+        }
+    );
+
+
+
+
+
+    var map = L.map("mymap", {zoomControl: false, scrollWheelZoom: false}).setView([ 1.290270,103.851959], 8);
+
+    var map2 = L.map("mymap2", {zoomControl: false, scrollWheelZoom: false} ).setView([40.11, -99.58],5);
+
+    var map3 = L.map("mymap3", {zoomControl: false, scrollWheelZoom: false}).setView([40.11, -99.58],5);
+
+    //var map4= L.map("mymap4", {zoomControl: false, scrollWheelZoom: false}).setView([40.11, -99.58],5);
+
+    var map4 = L.map('mymap4', {
+        zoomControl: false, scrollWheelZoom: false,
+        crs: mollweide,  // 19. assign the custom crs to the crs option. change the zoom levels due to the change of projection.
+        center: [0,0],
+        zoom: 1,
+        maxZoom: 1,
+        minZoom: 1,
+        detectRetina: true});
+
+
+
+    var colors = chroma.scale("YlOrRd").mode('lab').colors(5);
+    var rcolors = chroma.scale("set1").mode('lab').colors(40);
+
+
+    for (i = 0; i < 5; i++) {
+        $('head').append($("<style> .marker-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 30px; opacity: 0.8;text-shadow: 0 0 3px #ffffff;} </style>"));
+    }
+
+
+    for (i = 0; i < 5; i++) {
+        $('head').append($("<style> .comment-color-" + (i).toString() + " { color: " + colors[i] + "; font-size: 20px; opacity: 0.8;text-shadow: 0 0 3px #ffffff;} </style>"));
+    }
+
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {   maxZoom: 19
+    }).addTo(map);
+
+
+    L.tileLayer('assets/dark/{z}/{x}/{y}.png', {
+        maxZoom: 5,
+        tms: true,
+    }).addTo(map2);
+
+    // L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {   maxZoom: 19
+    // }).addTo(map2);
+
+
+    L.tileLayer('assets/dark/{z}/{x}/{y}.png', {
+        maxZoom: 5,
+        tms: true,
+    }).addTo(map3);
+
+
+    // L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {   maxZoom: 19
+    // }).addTo(map3);
+
+    // L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {   maxZoom: 19
+    // }).addTo(map4);
+
+
+    var swiiIcon = L.icon({
+        iconUrl: 'img/siww_logo.png',
+        iconSize:     [247, 81], // size of the icon
+        iconAnchor:   [80, 25]// point from which the popup should open relative to the iconAnchor
+    });
+
+    var cwiIcon = L.icon({
+        iconUrl: 'img/cws-logo-black.png',
+        iconSize:     [318, 76], // size of the icon
+        iconAnchor:   [160, 45]// point from which the popup should open relative to the iconAnchor
+    });
+
+    var pwbIcon = L.icon({
+        iconUrl: 'img/new-logo.png',
+        iconSize:     [65.4, 39], // size of the icon
+        iconAnchor:   [20, 20]// point from which the popup should open relative to the iconAnchor
+    });
+
+    var pwbbaseIcon = L.icon({
+        iconUrl: 'img/new-logo.png',
+        iconSize:     [87.2, 52], // size of the icon
+        iconAnchor:   [20, 20]// point from which the popup should open relative to the iconAnchor
+    });
+    L.marker([45.514685, -122.987080], {icon: cwiIcon}).addTo(map);
+    L.marker([ 1.290270,  103.851959], {icon: swiiIcon}).addTo(map);
+
+    L.marker([45.505374, -122.978524], {icon: pwbbaseIcon}).addTo(map2);
+
+    var layergroup2 =L.layerGroup().addTo(map2);
+
+    var layergroup4 =L.layerGroup().addTo(map4);
+
+    $(".leaflet-control").hide();
+
+
+    L.geoJson.ajax("assets/data/pwb-partners.geojson", {
+        pointToLayer: function (feature, latlng) {
+            var id = 0;
+            if (feature.properties.year === 2014) {
+                id = 0;
+            }
+            else if (feature.properties.year === 2015) {
+                id = 1;
+            }
+            else if (feature.properties.year === 2016) {
+                id = 2;
+            }
+            else if (feature.properties.year === 2017) {
+                id = 3;
+            }
+            else {
+                id = 4;
+            }
+            return L.marker(latlng, {icon: L.divIcon({className: 'fas fa-beer marker-color-' + (id + 1).toString()})});
+        }
+    }).addTo(map3);
+
+    L.geoJson.ajax("assets/data/oceans.geojson", {
+        style:{
+            fillColor:'#c5fffa',
+            fillOpacity: 0.2,
+            weight: 0,
+            opacity: 0.1,
+            color: '#7dfffa'
+        },
+
+    }).addTo(map4);
+
+
+    // L.geoJson.ajax("assets/data/countries.geojson", {
+    //     style:{
+    //         fillColor:'#b4b4b4',
+    //         fillOpacity: 0.1,
+    //         weight: 1,
+    //         opacity: 0.2,
+    //         color: '#aaaaaa',
+    //         dashArray: '3',
+    //         smoothFactor: 1.0
+    //     },
+    //
+    // }).addTo(map4);
+
+    L.geoJson.ajax("assets/data/earth-lakes-10km.geojson", {
+        style:{
+            fillColor:'#c5fffa',
+            fillOpacity: 0.2,
+            weight: 0,
+            opacity: 0.1,
+            color: '#7dfffa'
+        },
+
+    }).addTo(map4);
+
+    L.geoJson.ajax("assets/data/earth-rivers-10km.geojson", {
+        style:{
+            fillColor:'#c5fffa',
+            fillOpacity: 0.2,
+            weight: 1,
+            opacity: 0.1,
+            color: '#7dfffa'
+        },
+
+    }).addTo(map4);
+
+
+
+    ws = new WebSlides();
+    ws.el.addEventListener('ws:slide-change', function() {
+
+        crtDiv = $(".current div");
+
+        // if ($(".current").has("[class*='leaflet']").length) {
+        if (crtDiv.attr("id") === "mymap") {
+            map.invalidateSize();
+            map.setView([ 1.290270,103.851959],9);
+            <!--get geojson to come up at earlier zoom level)-->
+            map.flyTo([45.514685, -122.987080], 10, {animate: true, duration: 23});
+            L.geoJson.ajax("assets/data/washington.geojson", {
+                style:{
+                    fillColor:'#b4b4b4',
+                    fillOpacity: 0.4,
+                    weight: 3,
+                    opacity: 0.6,
+                    color: '#000000',
+                    dashArray: '10'
+                }
+            }).addTo(map);
+        }
+
+
+        if (crtDiv.attr("id") === "mymap2") {
+            map2.invalidateSize();
+            layergroup2.clearLayers();
+
+            for(let i=0; i<kits.features.length; i++) {
+
+                setTimeout(function () {
+                    lng = kits.features[i].geometry.coordinates[0];
+                    lat = kits.features[i].geometry.coordinates[1];
+
+                    layergroup2.addLayer( L.swoopyArrow([45.505374, -122.978524], [lat, lng], {
+                        labelFontSize: 12,
+                        iconAnchor: [20, 10],
+                        iconSize: [30, 16],
+                        //color: '#fff20f',
+                        color: rcolors[i],
+                        opacity: 0.7,
+                        weight:'3'
+                    }));
+                    layergroup2.addLayer( L.marker([lat, lng], {icon: pwbIcon}));
+
+                }, 400 * i);
+            }
+            layergroup2.addTo(map2);
+        }
+
+
+        if (crtDiv.attr("id") === "mymap3") {
+
+            map3.invalidateSize();
+            for (let i = 0; i < 5; i++)
+            {
+
+                $(".marker-color-" + (i+1).toString()).hide();
+                $("#year_partners").text((i+2014).toString());
+            }
+
+            for (let i = 0; i < 5; i++)
+            {
+
+                setTimeout(function () {
+                    $(".marker-color-" + (i+1).toString()).show();
+
+                    $("#year_partners").text((i+2014).toString());
+
+                }, 1000 * i);
+
+            }
+
+        }
+
+
+        var chart = bb.generate({
+            data:{
+                x: "Time",
+                json: lake,
+                keys: {
+                    value: ["STRG2012", "STRG2014","STRG2016", "yearAVG", "Time"],
+                }
+            },
+            point: {
+                show: false
+            },
+            axis: {
+                x: {
+                    type: "timeseries",
+                    tick: {
+                        format: "%e %b"
+                    }
+                }
+            },
+            bindto: "#chart"
+        });
+
+
+        if (crtDiv.attr("id") === "chart-section") {
+
+
+
+
+        }
+
+        if (crtDiv.attr("id") === "mymap4") {
+            map4.setView([0, 0],1);
+            map4.invalidateSize();
+
+            layergroup4.clearLayers();
+
+
+            for(let i=0; i < media.features.length; i++) {
+
+                setTimeout(function () {
+                    lng = media.features[i].geometry.coordinates[0];
+                    lat = media.features[i].geometry.coordinates[1];
+
+
+                    layergroup4.addLayer(  L.marker([lat, lng], {icon: L.divIcon({className: 'fas fa-comments comment-color-' + (i%3).toString()})}));
+
+                }, 50 * i);
+            }
+            layergroup4.addTo(map4);
+
+        }
+
+        if (crtDiv.attr("id") === "worduniverse") {
+            $("#worduniverse")
+                .empty()
+                .append('<canvas id="canvas2d"></canvas>');
+            new StarField('worduniverse', ["321","321", "321"], 2).render(40, 3);
+        }
+
+        if (crtDiv.attr("id") === "worduniverse2") {
+            $("#worduniverse2")
+                .empty()
+                .append('<canvas id="canvas2d"></canvas>');
+            new StarField('worduniverse2').render(20, 3);
+        }
+
+
+    });
+
+</script> <!-- Autoslide? window.ws = new WebSlides({ autoslide: 8000 }); -->
+</body>
+</html>
