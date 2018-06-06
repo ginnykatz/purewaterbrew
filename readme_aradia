@@ -1,0 +1,86 @@
+# **Pure Water Brew**
+
+  >
+  > **Client:** Pure Water Brew, Hillsboro Oregon USA
+  >
+  > **Authors:** Bo Zhao & Virginia Katz, Oregon State University
+  >
+  > **Contributors:** Courtney van Stolk & Aradia Farmer, Oregon State University
+
+## **Project Description**
+This storymap presentation was created for Clean Water Services to showcase their Pure Water Brew competition at the
+International Singapore Water Week 2018. Clean Water Services is changing the conversation around water reuse. This
+storymap documents how that story has evolved since 2012, and is an extension of the Clean Water Services website. It is
+meant to be an engaging, educational, and approachable interface.
+
+## Technical summary
+Our system architecture was built on the template for a storymap, and intended for delivery as a Powerpoint presentation.
+
+<br>Main functions of this storymap include
+<li>looping video
+
+```
+<video class="background-video dark" autoplay muted loop>
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+```
+<li>location zooming from Singapore to Oregon
+<li>a coordinated-view graph of water levels in Oregon in 2012 and 2015
+<li>a cutout image and quote from the founder of CWS
+<li>two word-universes
+<li>an animated map of media coverage of PWB in the United States
+<li>a static map of breweries that have engaged with PWB
+<li>an interview clip from a Department of Environmental Quality spokesperson
+
+## Sketch
+![sketch](sketch.png)
+
+## Design Scheme
+![design](colorscheme.png)
+
+## Data Sources
+<br>**Water storage data:** Bureau of Land Management’s Pacific Northwest Hydromet Historical Data Access portal
+<br>**Videos in presentation:** provided by Clean Water Services
+<br>**Beer locations:** provided by Clean Water Services; points created using geojson.io
+
+## Favicon
+![logo](pwb-logo.png)
+
+## Applied Libraries
+*This project is build on the work of the developers who have made the following platforms open for re-use:*
+
+**Webslides:** HTML library used to create the interface of the project
+https://webslides.tv/#slide=1
+
+**Google Fonts:**
+<li>Cairo: designed by Mohamed Gaber https://fonts.google.com/specimen/Cairo
+<li>Roboto: designed by Christian Robertson https://fonts.google.com/specimen/Roboto
+
+**Fontastic.me:** source for icons
+
+**Leaflet:** open-source javascript library to create integrated web maps
+https://leafletjs.com/
+
+**Billboard:** open-source javascript library to create the chart in scene 5
+https://naver.github.io/billboard.js/
+
+**Chroma:** open-source javascript library which created color schemes for the web maps
+https://github.com/gka/chroma.js/
+
+**Starfield.js:** a javascript library which we used to display keywords
+https://gist.github.com/samliew/fdf0858873fedcdc6a2e14aab8165832
+
+**D3:** open-source javascript library for DOM manipulation
+https://d3js.org/
+
+**Proj4.js:** an open-source javascript library for map projections
+http://proj4js.org/
+
+**Leaflet.curve:** this publically available javascript code is used to display curved lines on Leaflet;
+Bo used it to create curving arrows for the maps in this project.
+https://github.com/elfalem/Leaflet.curve
+
+
+## Credit
+
+## Acknowledgment
