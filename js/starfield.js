@@ -10,11 +10,21 @@ var Star = function(x, y, maxSpeed) {
     this.slope = y / x; // This only works because our origin is always (0,0)
     this.opacity = 0;
     this.speed = Math.max(Math.random() * maxSpeed, 1);
-    list = ["waste", "sewage", "tasty", "awesome", "dirty", "tail"];
+    list = [];
+    if ($(".current div").attr("id") === "worduniverse") {
+        list =["Wastewater","Recycled water","Removal","Indirect potable reuse","Microconstituents","Sewer","effluent","Toilet to tap", "Yuck", "Stinky", "Approval", "Recycled wastewater", "Recycled sewage", "Indirect Potable Reuse", "Sewage", "Purity", "Taste", "Pee", "Poo"];
+   } else {
+        list = ["Sewage to Brewage", "Pure Water Brew", "Quality, not history", "Exceeds drinking water standards", "Water purification", "High  purify water", "Proven technology", "Purification techinique", "Yuck Factor"];
+    }
+
+
+
+    //list =["321","321", "321"];
     stmt = ["pos", "neg"];
-    wlist = [1, 2, 3, 4, 5, 6];
+    wlist = [1, 2, 3, 4, 5, 6, 7, 8,];
     this.sentiment = stmt[Math.floor(Math.random() * 2)];
-    this.text = list[Math.floor(Math.random() * 6)];
+
+    this.text = list[Math.floor(Math.random() * list.length)];
     this.weight = wlist[Math.floor(Math.random() * 6)]
 };
 
@@ -151,13 +161,21 @@ StarField.prototype._renderStarField = function() {
 
         //this.canvas.font = (10 + Math.floor(Math.random() * 11)).toString() +"px Arial";
 
-       this.canvas.font = (10 + star.weight * (star.weight - 1)).toString() +"px Cairo";
-        if (star.sentiment === "neg") {
-            this.canvas.fillStyle = "rgba(0, 200, 0, " + star.opacity + ")";
+       this.canvas.font = (15 + star.weight * (star.weight - 1)).toString() +"px Cairo";
+        // if (star.sentiment === "neg") {
+        //     this.canvas.fillStyle = "rgba(0, 200, 0, " + star.opacity + ")";
+        //
+        // } else {
+        //     this.canvas.fillStyle = "rgba(0, 200, 0, " + star.opacity + ")";
+        // }
 
-        } else {
-            this.canvas.fillStyle = "rgba(200, 0, 0, " + star.opacity + ")";
+        if ($(".current div").attr("id") === "worduniverse") {
+            this.canvas.fillStyle = "rgba(223, 164, 75, " + star.opacity + ")";
+        }  else {
+            this.canvas.fillStyle = "rgba(59, 164, 193, " + star.opacity + ")";
         }
+
+
 
         this.canvas.fillText(
             star.text,

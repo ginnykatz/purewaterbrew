@@ -1,28 +1,3 @@
-.storymap-progressline {
-    background: #007CCF !important;
-    box-shadow: #042847 !important;
-}
-
-nav {
-    height: 46px !important;
-}
-
-
-#chart {
-    max-width: 600px;
-    max-height: 400px;
-}
-
-
-.sm-middle {
-    margin-top: 20%
-}
-
-
-/*.bg-darkblue {*/
-    /*background-color: #0092bc; }*/
-
-
 #mymap {
     position: fixed;
     top: 0;
@@ -30,7 +5,7 @@ nav {
     right: 0;
     min-width: 100%;
     min-height: 100%;
-    display: block;
+    display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -48,7 +23,30 @@ nav {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+#mymap3 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
+#mymap4 {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 60%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: rgba(102, 102, 102, 0);
+}
 
 #date-chart {
     width: 100%;
@@ -56,23 +54,69 @@ nav {
 }
 
 
-.neg-term {
 
-    color: red;
+button{
+    border-radius: 2px;
+    font-size: 13px;
+    /*background-color: rgba(52, 52, 52, 0.64)!important;*/
+    border-color: rgba(117, 117, 117, 1);
+    color: rgba(255, 255, 255, 0.54);
+    text-shadow: 0 0 3px rgba(0, 0, 0, .55);
+    text-transform: lowercase;
+    opacity: 0.3;
+}
+
+button::first-letter {
+    text-transform: uppercase;
+}
+
+.current-step {
+    /*color:rgba(59, 164, 193, 255);*/
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 6px rgba(0, 0, 0, .55);
+    font-size: 20px;
+    opacity: 1;
     /*font-weight: bold;*/
 }
-.pos-term {
 
-    color: deepskyblue;
-    /*font-weight: bold;*/
+.mind-process {
+    margin-bottom: 20px;
 }
+
+.mind-process-up {
+    top: -180px;
+}
+
+.mind-process-up-2 {
+    position: fixed;
+    top: 120px;
+    left: 6%;
+}
+
+.arrow-color{
+    color: rgba(255, 255, 255, 0.64);
+}
+
+
+.flexblock li {
+    margin-bottom: 20px
+}
+
+
+
 .date {
-
     color: whitesmoke;
     font-size: 20px;
 }
-
-
+.dark-text {
+    color: #1c1c1c;
+    font-size: 40px;
+}
+.light-text{
+    color:white;
+    font-size:30px;
+    text-align:center;
+}
 #worduniverse {
     position: fixed;
     top: 0;
@@ -86,6 +130,18 @@ nav {
     font-family: "Roboto", "San Francisco";
 }
 
+#worduniverse2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "Roboto", "San Francisco";
+}
 
 #network {
     position: fixed;
@@ -101,9 +157,6 @@ nav {
 }
 
 
-
-
-
 .flashit{
     -webkit-animation: flash linear 1s infinite;
     animation: flash linear 1s infinite;
@@ -117,4 +170,46 @@ nav {
     0% { opacity: 1; }
     50% { opacity: .1; }
     100% { opacity: 1; }
+}
+
+
+
+.logo {
+    text-transform: lowercase; }
+
+.logo a {
+    background: url("../img/new-logo.png") no-repeat 0 0;
+    background-size: 7.2rem;
+    float: left;
+    height: 7.2rem;
+    /*text-indent: -4000px;*/
+    /*If you remove text-indent and add: */
+    /*padding-left: 6rem;*/
+    vertical-align: middle;
+    width: 7.2rem }
+
+header {
+    height: 8rem;
+    padding-top: 2rem;
+    background-color: rgba(35, 35, 35, 0.38)!important;
+}
+
+
+nav[role='navigation'] li a {
+    background-color: rgba(50, 50, 50, 0);
+    color: #fff;
+}
+
+
+nav[role='navigation'] li a:hover {
+    background-color: rgba(50, 50, 50, 0);
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
 }

@@ -1,0 +1,23 @@
+.sm-title{
+    z-index: 100;
+    position:fixed;
+    top:65px;
+    left:10px;
+
+
+}
+.lg-title{
+    position: fixed;
+    top: 145px;
+    left: 55px;
+}
+.year{
+    position:fixed;
+    top: 350px;
+
+}
+.box {
+    position: fixed;
+    top: 410px;
+    right: 170px;
+}
