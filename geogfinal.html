@@ -44,6 +44,7 @@
 
 
     <script src="js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 
     <!-- Load d3.js -->
@@ -62,33 +63,65 @@
     <script src="assets/data/lake.js"></script>
 </head>
 <body>
+<!--Navbar Banner-->
 <header role="banner">
     <nav role="navigation">
-        <span class="logo"><a href="index.html" title="Pure Water Brew"> Pure Water Brew</a></span>
+        <!--PWB logo-->
+        <span class="logo"><a href="index.html" title="Pure Water Brew">Pure Water Brew</a></span>
         <ul>
+            <!--share links-->
+            <!--facebook icon-->
             <li>
-                <a href="index.html" title="English">
-                    EN
-                </a>
+                <a class="fab fa-facebook-square btn icons" href="#" target="_blank"></a>
             </li>
             <li>
                 <a>|</a>
             </li>
+            <!--twitter icon-->
             <li>
-                <a href="index2.html" title="中文">
-                    中文
-                </a>
+                <a class="fab fa-twitter-square btn icons" href="#" target="_blank"></a>
+            </li>
+            <li>
+                <a>|</a>
+            </li>
+            <!--github icon-->
+            <li>
+                <a class="fab fa-git-square btn icons" href="https://www.github.com/ginnykatz/purewaterbrew/" target="_blank"></a>
+            </li>
+            <li>
+                <a>|</a>
+            </li>
+            <!--info icon-->
+            <li>
+                <a class="fas fa-info-circle btn icons" style="color:white;" data-toggle="modal" data-target="#info-modal"></a>
+            </li>
+            <li>
+                <a>|</a>
+            </li>
+            <!--English-->
+            <li>
+                <a href="index.html" title="English">EN</a>
+            </li>
+            <li>
+                <a>|</a>
+            </li>
+            <!--Mandarin-->
+            <li>
+                <a href="index2.html" title="中文">中文</a>
             </li>
         </ul>
     </nav>
 </header>
+
 <main role="main">
     <article id="webslides">
-        <!--1.Landing-->
+
+        <!--1. Landing-->
         <section class="bg-apple">
             <video class="background-video dark" autoplay muted loop>
                 <source src="assets/landing.mp4" type="video/mp4">
             </video>
+            <!--Title-->
             <div class="wrap aligncenter">
                 <h1>
                     <strong>Changing the Water Reuse Conversation with Beer</strong>
@@ -98,104 +131,77 @@
                 <h4> GEOG 4572 Final Presentation</h4>
                 <h4>Spring 2018
                     <br>
-
                     <img src="assets/img/osu-vert-logo_1.svg">
                 </h4>
-
             </div>
+            <!--Team Attribution-->
             <div style="position:fixed; bottom:30px; left:50px; width:100%;">
                 <div class="row">
+                    <!--avatar images, names, and share links-->
                     <div class="col-4">
+                        <!--Ginny-->
                         <div class="row">
+                            <!--avatar image-->
                             <div class="col-2">
-                                <img class="alignright avatar-72 img-thumbnail " src="assets/img/ginny.svg"
+                                <img class="alignright avatar-72 img-thumbnail" src="assets/img/ginny.svg"
                                      alt="Ginny Katz">
                             </div>
+                            <!--name and share links-->
                             <div class="col-10">
+                                <!--Name-->
                                 <div class="row names alignleft">
                                     <div class="col-12">
-                                        <p><a href="www.linkedin.com/in/virginiakatz">Ginny Katz </a></p>
+                                        <p><a href="www.linkedin.com/in/virginiakatz">Ginny Katz</a></p>
                                     </div>
                                 </div>
 
-                                <div class="row icons ">
-                                    <div class="col-12 alignleft">
-                                        <!--icons here-->
-                                        <!--facebook icon-->
-                                        <a class="fab fa-facebook-square btn"
-                                           href="https://www.facebook.com/sharer/sharer.php?u=https%3A//briangkatz.github.io/oa-adaptation/"
-                                           style="top:30px;left:0"
-                                           target="_blank"></a>
-                                        <!--twitter icon-->
-                                        <a class="fab fa-twitter-square btn"
-                                           href="https://twitter.com/home?status=https%3A//briangkatz.github.io/oa-adaptation/"
-                                           style="top:55px;left:0"
-                                           target="_blank"></a>
-                                        <!--github icon-->
-                                        <a class="fab fa-git-square btn"
-                                           href="https://github.com/briangkatz/oa-adaptation" style="top:80px;left:0"
-                                           target="_blank"></a>
-
-                                    </div>
-                                </div>
-                                <!--<p class="names"><a href="www.linkedin.com/in/virginiakatz">Ginny Katz </a></p>-->
                             </div>
-
-
                         </div>
-
-
+                        <!--Courtney-->
                         <div class="row">
+                            <!--avatar image-->
                             <div class="col-2">
                                 <img class="alignright avatar-72 img-thumbnail" src="assets/img/courtney.png"
                                      alt="Courtney Van Stolk">
                             </div>
+                            <!--name and share links-->
                             <div class="col-10">
-                                <p class="names">Courtney Van Stolk</p>
+                                <!--name-->
+                                <div class="row names alignleft">
+                                    <div class="col-12">
+                                        <p><a href="#">Courtney Van Stolk</a></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="row icons ">
-                            <div class="col-12 ">
-                                <!--icons here-->
-                                <!--facebook icon-->
-                                <a class="fab fa-facebook-square btn"
-                                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A//briangkatz.github.io/oa-adaptation/"
-                                   style="top:30px;left:0"
-                                   target="_blank"></a>
-                                <!--twitter icon-->
-                                <a class="fab fa-twitter-square btn"
-                                   href="https://twitter.com/home?status=https%3A//briangkatz.github.io/oa-adaptation/"
-                                   style="top:55px;left:0"
-                                   target="_blank"></a>
-                                <!--github icon-->
-                                <a class="fab fa-git-square btn"
-                                   href="https://github.com/briangkatz/oa-adaptation" style="top:80px;left:0"
-                                   target="_blank"></a>
-
-                            </div>
-                        </div>
+                        <!--Aradia-->
                         <div class="row">
+                            <!--avatar image-->
                             <div class="col-2">
                                 <img class="alignright avatar-72 img-thumbnail" src="assets/img/aradia.png"
                                      alt="Aradia Farmer">
                             </div>
+                            <!--name and share links-->
                             <div class="col-10">
-                                <p class="names">Aradia Farmer</p>
+                                <!--name-->
+                                <div class="row names alignleft">
+                                    <div class="col-12">
+                                        <p><a href="#">Aradia Farmer</a></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!--blank placeholder column-->
                     <div class="col-8"></div>
                 </div>
             </div>
+            <!--OSU Geoviz Logo-->
             <p class="text-symbols"></p>
-            <p><a href="http://geoviz.ceoas.oregonstate.edu/"
-                  title="NeoCarto"></a>
-            </p>
-
-
+            <p><a href="http://geoviz.ceoas.oregonstate.edu/" title="OSU Cartography & Geovisualization Group"></a></p>
         </section>
-        <!--2. intro -->
+
+        <!--2. Intro -->
         <section class="bg-apple slide-top">
             <div id="mymap"></div>
             <!--To add a title tp the images-->
@@ -1104,5 +1110,120 @@
 
 
 </script> <!-- Autoslide? window.ws = new WebSlides({ autoslide: 8000 }); -->
+
+
+<!--the info page-->
+<div class="modal fade" id="info-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h2 class="modal-title">About the Authors</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!--avatar images, names, and share links-->
+                    <div class="col-12">
+                        <!--Ginny-->
+                        <div class="row">
+                            <!--avatar image-->
+                            <div class="col-2">
+                                <img class="alignright img-thumbnail img-responsive" src="assets/img/ginny.svg"
+                                     alt="Ginny Katz">
+                            </div>
+                            <!--name and share links-->
+                            <div class="col-10">
+                                <!--Name-->
+                                <div class="row names alignleft">
+                                    <div class="col-12">
+                                        <p><a href="www.linkedin.com/in/virginiakatz">Ginny Katz</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Courtney-->
+                        <div class="row">
+                            <!--avatar image-->
+                            <div class="col-2">
+                                <img class="alignright img-thumbnail img-responsive" src="assets/img/courtney.png"
+                                     alt="Courtney Van Stolk">
+                            </div>
+                            <!--name and share links-->
+                            <div class="col-10">
+                                <!--name-->
+                                <div class="row names alignleft">
+                                    <div class="col-12">
+                                        <p><a href="#">Courtney Van Stolk</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aradia-->
+                        <div class="row">
+                            <!--avatar image-->
+                            <div class="col-2">
+                                <img class="alignright img-thumbnail img-responsive" src="assets/img/aradia.png"
+                                     alt="Aradia Farmer">
+                            </div>
+                            <!--name and share links-->
+                            <div class="col-10">
+                                <!--name-->
+                                <div class="row names alignleft">
+                                    <div class="col-12">
+                                        <p><a href="#">Aradia Farmer</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="modal-body">-->
+                <!--<h4>This story map describes Ginny Katz's MPH graduate internship with Lincoln County Sherriff's office. </h4>-->
+                <!--<h5>Completed: April 2017- August 2017</h5>-->
+                <!--<br>-->
+                <!--<h5>Data Sources:</h5>-->
+                <!--<ol>-->
+                    <!--<li>-->
+                        <!--Cascadia Damage Potential (2013) Map <a href="v/oem/Documents/Oregon_Resilience_Plan_Final.pdf" target="_blank">Oregon Resileince Plan</a>-->
+                    <!--</li>-->
+
+                <!--</ol>-->
+                <!--<h5>References:</h5>-->
+                <!--<ol>-->
+                    <!--<li>-->
+                        <!--<a href="http://www.co.lincoln.or.us/sheriff" target="_blank">Lincoln County Sherriff's Office</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="https://www.oregon.gov/gov/policy/orr/Pages/cascadia.aspx" target="_blank">Oregon Emergency Management</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="https://www.oregon.gov/OEM/Pages/default.aspx" target="_blank">Oregon Emergency Management</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="https://www.oregon.gov/OEM/Pages/default.aspx" target="_blank">Oregon Emergency Management</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<p>-->
+                            <!--<a href="https://www.oregon.gov/oem/Documents/Oregon_Resilience_Plan_Final.pdf" target="_blank">Oregon Resilience PLan</a>-->
+                        <!--</p>-->
+                    <!--</li>-->
+
+                <!--</ol>-->
+                <!--<h5>Attributions:</h5>-->
+                <!--<p><a href="https://github.com/jakobzhao/storymap/">storymap.js</a> | Released Date: 02/20/2017/ Version: 2.3 | MIT License</p>-->
+                <!--<p>This story map uses the <a href="https://tinyurl.com/ybz7hzvd" target="_blank">Intern style</a> base map built with <a href="https://www.mapbox.com/">Mapbox</a>.</p>-->
+                <!--<p>photos and videos by: Ginny Katz</p>-->
+                <!--<p>-->
+                    <!--Cascadia Damage Potential (2013) Map  <a href="https://www.oregon.gov/oem/Documents/Oregon_Resilience_Plan_Final.pdf" target="_blank">Oregon Resilience PLan</a>-->
+                <!--</p>-->
+                <!--<h5><b>Author: Ginny Katz</b></h5>-->
+                <!--<p><a href="https://health.oregonstate.edu/degrees/graduate/public-health/global-health">College of Public Health and Human Sciences</a> | <a href="https://www.oregonstate.edu/">Oregon State University</a></p>-->
+
+            <!--</div>-->
+        </div>
+    </div>
+</div>
 </body>
 </html>
