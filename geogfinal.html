@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pure Water Brew</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="please add">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="css/google-fonts.css" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
+    <link rel="stylesheet" href="css/all.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css">-->
+    <link rel="stylesheet" href="css/leaflet.css">
+    <!--additional fine tune styling-->
+    <link rel="stylesheet" href="css/ginny.css">
+
+
+    <!-- Mapbox GL -->
+    <link rel='stylesheet' href="css/mapbox-gl.css"/>
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+
+    <link rel="shortcut icon" href="img/new-logo.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="img/new-logo.png">
+
+    <!-- Android -->
+    <script src="js/starfield.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/proj4.js"></script>
+    <script src="js/proj4leaflet.min.js"></script>
+
+    <script src="js/leaflet.ajax.min.js"></script>
+
+    <script src="js/mapbox-gl.js"></script>
+
+    <script src="js/leaflet-mapbox-gl.js"></script>
+
+
+    <script src="js/jquery.min.js"></script>
+
+
+    <!-- Load d3.js -->
+    <script src="js/d3.v5.min.js"></script>
+
+    <!-- Load billboard.js -->
+    <link rel="stylesheet" type="text/css" href="css/billboard.min.css"/>
+    <script src="js/billboard.min.js"></script>
+
+
+    <script src="js/chroma.min.js"></script>
+    <script src="js/webslides.min.js"></script>
+    <script src="js/Leaflet.SwoopyArrow-customized.js"></script>
+    <script src="assets/data/kits.js"></script>
+    <script src="assets/data/media.js"></script>
+    <script src="assets/data/lake.js"></script>
+</head>
+<body>
+<header role="banner">
+    <nav role="navigation">
+        <span class="logo"><a href="index.html" title="Pure Water Brew"> Pure Water Brew</a></span>
+        <ul>
+            <li>
+                <a href="index.html" title="English">
+                    EN
+                </a>
+            </li>
+            <li>
+                <a>|</a>
+            </li>
+            <li>
+                <a href="index2.html" title="中文">
+                    中文
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main role="main">
+    <article id="webslides">
+        <!--1.Landing-->
+        <section class="bg-apple">
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/background.mp4" type="video/mp4">
+            </video>
+            <div class="wrap aligncenter">
+                <h1>
+                    <strong>Changing the Water Reuse Conversation with Beer</strong>
+                </h1>
+                <br>
+                <br>
+                <h4> GEOG 4572 Final Presentation</h4>
+                <h4>Spring 2018
+                <br>
+
+                    <img  src="assets/img/osu-vert-logo_1.svg">
+                </h4>
+
+            </div>
+                <div style="position:fixed; bottom:30px; left:50px; width:100%;">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img class="aligncenter avatar-72 img-thumbnail " src="assets/img/ginny.svg" alt="Ginny Katz">
+                                </div>
+                                <div class="col-10">
+                                    <p class="names">Ginny Katz</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <img class="aligncenter avatar-72 img-thumbnail" src="assets/img/courtney.png" alt="Courtney Van Stolk">
+                                </div>
+                                <div class="col-10">
+                                    <p class="names">Courtney Van Stolk</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <img class="aligncenter avatar-72 img-thumbnail" src="assets/img/aradia.png" alt="Aradia Farmer">
+                                </div>
+                                <div class="col-10">
+                                    <p class="names">Aradia Farmer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8"></div>
+                    </div>
+                </div>
+                <p class="text-symbols"></p>
+                <p><a href="http://geoviz.ceoas.oregonstate.edu/"
+                      title="NeoCarto"></a>
+                </p>
+
+
+        </section>
+        <!--2. intro -->
+        <section class="bg-apple slide-top">
+            <div id="mymap"></div>
+            <!--To add a title tp the images-->
+            <div class="wrap fadeInUp bg-trans-light aligncenter size-30">
+            <h2>From Hillsboro to Singapore</h2>
+            </div>
+        </section>
+        <!--fade into WA county urbanization-->
+        <section class="bg-apple slide-top">
+            <video class="background-video" autoplay muted loop>
+                <source src="assets/intro.mp4" type="video/mp4">
+            </video>
+            <div class="wrap  aligncenter size-30">
+            <h2 class="bg-trans-light">A History of Water Innovation</h2>
+
+            </div>
+        </section>
+
+        <!--3.Innovation due to Pressure-->
+        <section class="fullscreen bg-apple">
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/innovate.mp4" type="video/mp4">
+            </video>
+            <div class="wrap"><h1>Preparing for the New Normal</h1></div>
+        </section>
+
+        <!--4. Leader & Catalyst to a water smart society*****ADD HAGG LAKE DATA VIZ******-->
+        <section class="bg-apple aligncenter">
+            <div class="wrap size-70">
+                <h2>Water Supplies in an Uncertain Climate</h2>
+                <br/> <br/> <br/> <br/> <br/>
+                <div id="chart" class="aligncenter"></div>
+
+            </div>
+
+
+            <!-- .end .wrap -->
+        </section>
+
+        <!--5.CLIMAX Nature's Silent call for water action  -->
+
+        <section class="bg-apple">
+            <div class="wrap">
+
+                <div class="grid vertical-align">
+                    <div class="column">
+                        <ul class="wrap size-50">
+                            <li>
+                                <div>
+                                    <p class="text-subtitle">Heeding Nature's Silent Call</p>
+                                    <h3>Innovating with Water Reuse</h3>
+                                    <br>
+                                    <p>The Virginia Rail and American Bittern <br><i>Photos taken at Fernhill Natural Treatment System</i></p>
+                                </div>
+                            </li>
+                            <li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure>
+                            <div class="embed">
+                                <video autoplay loop muted poster="">
+                                    <source src="assets/birds2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                        </figure>
+
+                    </div>
+                </div>
+
+
+                <!-- .end card-50 -->
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+        <!--Window of discourse-->
+
+        <section class="bg-apple">
+            <div class="wrap">
+
+                <h2 class="alignleft">Window of Discourse</h2>
+
+                <p class="flexblock alignleft"> From &nbsp; <strong>"The Overton Window"</strong> &nbsp; written by <i>  &nbsp; Joseph P. Overton</i></p>
+
+
+
+                <ul class="flexblock">
+                    <li class="button-1">
+                        <div class="process step-1"></div>
+                        <h2>Unthinkable</h2>
+                    </li>
+                    <li class="button-2">
+                        <div class="process step-2"></div>
+                        <h2>Radical</h2>
+                    </li>
+                    <li class="button-3">
+                        <div class="process step-3"></div>
+                        <h2>Acceptable</h2>
+                    </li>
+                    <li class="button-4">
+                        <div class="process step-4"></div>
+                        <h2>Sensible</h2>
+                    </li>
+                    <li class="button-5">
+                        <div class="process step-5"></div>
+                        <h2>Popular</h2>
+                    </li>
+                    <li class="button-6">
+                        <div class="process step-6"></div>
+                        <h2>Good Public Policy</h2>
+                    </li>
+                </ul>
+
+                <div class="wrap aligncenter">
+                    <blockquote class="text-quote">
+                        <p>Provide information that is interesting and engaging and is simple enough to understand but
+                            technical enough to trust.</p>
+                        <p><cite> Talking About Water, pp. 71</cite></p>
+                    </blockquote>
+                </div>
+
+
+            </div>
+        </section>
+
+<!--Wordcloud animation-->
+        <section class="bg-apple">
+            <div class="wrap">
+
+                <div class="grid vertical-align">
+                    <div class="column">
+                        <ul class="wrap size-50">
+                            <li>
+                                <div>
+                                    <p class="text-subtitle">Analyzing the Conversation</p>
+                                    <h3>Through The Media</h3>
+                                </div>
+                            </li>
+                            <li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure>
+                            <div class="embed">
+                                <video autoplay loop muted poster="">
+                                    <source src="assets/wordcloud-animation.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                        </figure>
+
+                    </div>
+                </div>
+
+
+                <!-- .end card-50 -->
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+
+
+
+
+
+
+
+        <!--8.Verbiage What we we said, ADD WORDUNIVERSE 1 -->
+
+        <section class="bg-apple slide-top">
+            <div id="worduniverse"></div>
+
+            <div class="wrap mind-process">
+                <button class="button-1 current-step">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+                <h2> Public Perception</h2>
+            </div>
+        </section>
+
+
+        <!--7.ART+ Beer, I think yes**More Brewer footage***-->
+
+        <section class="bg-apple slide-top">
+            <video class="background-video dark" autoplay loop>
+                <source src="assets/i-think-yes.mp4" type="video/mp4">
+            </video>
+
+            <div class="wrap mind-process">
+                    <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                    <button class="button-2 current-step" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                    <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                    <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                    <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                    <button class="button-6">Good Public Policy</button>
+            </div>
+
+        <footer>
+            <div class="wrap">
+                <blockquote class="text-quote"><h2><strong>Beer? I think, yes!</strong></h2>
+            </blockquote>
+            <br> <br> <br>
+            <h6> Art Larrance</h6>
+            <p> Cascade Brewing · Co-Founder and CEO</p>
+
+            <h6>Bill Gaffi, P.E.</h6>
+            <p> General Manager of Clean Water Services · Executive
+                Director of the Clean Water Institute </p>
+            </div>
+        </footer>
+
+        </section>
+
+
+        <!--box-->
+
+        <section class="bg-apple slide-top">
+            <span class="background" style="background-image:url('img/kit.gif')"></span>
+
+            <div class="wrap mind-process">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2 current-step" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+                <h2>Sharing a taste</h2>
+            </div>
+        </section>
+
+
+        <!--9.Sending the message-->
+
+        <section class="bg-apple slide-top">
+            <div id="mymap2"></div>
+
+            <div class="wrap mind-process">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3 current-step">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+                <h2>Sending the Message</h2>
+            </div>
+
+        </section>
+
+        <!--12.Media Conversation growth timeline -->
+        <section class="fullscreen bg-apple">
+            <div class="card-60">
+                <figure>
+                    <div id="mymap4"></div>
+                </figure>
+                <div class="flex-content ">
+                    <!--<p class="text-subtitle">Clear Concept Verbiage</p>-->
+                    <!--<p class="text-symbols">* * * </p>-->
+                    <div id="vc" class=" content-center alignleft text-quote fadeInUp"> <h2> Pure Water Brew </h2></div>
+                </div>
+            </div>
+
+            <div class="wrap mind-process mind-process-up-2">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3 current-step">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+                <h2>Clear Concept Verbiage</h2>
+            </div>
+        </section>
+        <!--6.Bill-->
+        <section class="bg-apple slide-top">
+            <span class="background-right-bottom" style="background-image:url('img/bill-can.png')"></span>
+            <div class="wrap mind-process">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4 current-step">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+
+            </div>
+
+            <div class="wrap">
+                <br> <br> <br> <br> <br>
+                <blockquote class="text-quote">
+                    <p>The only thing <strong><i>remarkable</i></strong> about it is that it isn't <strong><i>remarkable</i></strong>
+                        at all.</p>
+                    <cite>Bill Gaffi, P.E. · General Manager of Clean Water Services · Executive Director of the Clean Water Institute</cite>
+                </blockquote>
+            </div>
+
+
+        </section>
+
+
+        <!--13. Verbiage WHAT WE LEARNED ***ADD WORDUNIVERSE 2****-->
+        <section class="bg-apple slide-top">
+            <div id="worduniverse2"></div>
+
+            <div class="wrap mind-process">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4 current-step">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+
+                <h2>Positive words we got back </h2>
+            </div>
+
+        </section>
+
+        <!--10.Partnership  -->
+
+       <!--Get Map working with title -->
+        <section class="bg-apple slide-top">
+            <div id="mymap3"></div>
+
+            <div class="wrap mind-process">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5 current-step">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6">Good Public Policy</button>
+
+                <h2>Expanding Partnership <span id="year_partners">2014</span></h2>
+
+            </div>
+
+            <div class="wrap fadeInUp">
+
+            </div>
+
+
+        </section>
+
+        <!--11. DEQ. Spark-->
+        <section class="bg-apple">
+
+            <div class="wrap mind-process mind-process-up">
+                <button class="button-1">Unthinkable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-2" >Radical</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-3">Acceptable</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-4">Sensible</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-5">Popular</button> <i class="arrow-color fas fa-angle-right"></i>
+                <button class="button-6 current-step">Good Public Policy</button>
+
+            </div>
+
+            <div class="wrap">
+                <div class="grid vertical-align">
+                    <div class="column">
+                        <ul class="flexblock specs">
+                            <li>
+                                <div>
+                                    <h3>Department of Environmental Quality , State of Oregon </h3>
+                                    <q><img class="img-thumbnail" src="img/deq-logo.png">"Using recycled water will
+                                        become increasingly important in our region as demands on our water resources
+                                        increase."</q>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3>Environmental Protection Agency, United States</h3>
+                                <p><img class="img-thumbnail" src="img/epa-seal.png"/>"Pure Water Brew is an excellent
+                                    example of our ability to take water that is otherwise thought of as waste and put
+                                    it to direct positive value as a beer."</p>
+
+                                <p class="">"There is no reason in the world to judge water by its
+                                    <strong>history</strong>.We are very much focused on what’s the <strong>quality</strong> of the water for the use to which it will be put."
+                                    <cite>Ken Kopocis, EPA Deputy Administrator Office of Water (2015)</cite>
+                                </p>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <figure>
+                            <div class="embed">
+                                <video autoplay loop muted poster="">
+                                    <source src="assets/epa-interview2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+                <!-- .end card-50 -->
+            </div>
+            <!-- .end .wrap -->
+
+
+        </section>
+
+
+        <!--15.Beer Happy (WEFTEC FOOTAGE)-->
+        <section class="bg-apple">
+
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/brewer-details.mp4" type="video/mp4">
+            </video>
+            <div class="wrap alignleft fadeInUp">
+                <h2><strong>A Happy Experience</strong></h2>
+            </div>
+            <!-- .end .wrap -->
+        </section>
+
+
+
+
+        <!--16. Final thoughts- Andy Quote-->
+        <section class="bg-apple">
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/watershed-beauty-shots.mp4" type="video/mp4">
+            </video>
+            <div class="wrap">
+                <div class="content-left align-left">
+                    <blockquote class="text-quote">
+                        <p>All water is reused. Mother Nature knows that.</p>
+                        <cite> <img class="img-thumbnail avatar-64" src="img/dunyi.jpg"> Andy Duyck · Chairman of the Board
+                        Clean Water Services</cite>
+                    </blockquote>
+                </div>
+            </div>
+            <!-- end .flex-content-->
+        </section>
+
+        <!--17.Closing-->
+        <section class="bg-apple slide-bottom">
+
+            <video class="background-video dark" autoplay muted loop>
+                <source src="assets/beer-invite.mp4" type="video/mp4">
+            </video>
+
+            <div class="wrap alignright fadeInUp">
+                <div class="content-right">
+                    <h2>
+                        <strong>Questions?</strong>
+                        <a target="_blank" title="Share on Twitter"
+                           href="https://twitter.com/intent/tweet?text=share%20the%20story%20from%20CWS"><i
+                                class="fab fa-twitter"></i></a>
+
+                        <small><a href="https://twitter.com/CleanWaterNews">@CleanWaterNews</a></small>
+                    </h2>
+
+                    <p><a href="https://twitter.com/cleanwaternews?lang=en"
+                          title="Diane Taniguchi-Dennis, Clean Water Services"> </a></p>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<footer>
+    <div class="wrap">
+
+        <!--<span class="alignright">-->
+        <!--<a href="https://www.cleanwaterservices.org/about-us/clean-water-institute/" title= "Clean Water Service"> <img class="white logo" src="img/logo-cws-white.png" alt="Clean Water Institute"></a>-->
+        <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+        <!--<a href="https://www.cleanwaterservices.org/about-us/clean-water-institute/" title= "Clean Water Institute"> <img class="white logo" src="img/cwi-white.png" alt="Clean Water Institute"></a>-->
+        <!--&nbsp;&nbsp;              &nbsp;&nbsp;&nbsp;&nbsp;-->
+        <!--<a href="https://www.cleanwaterservices.org/about-us/clean-water-institute/" title= "SWII"> <img class="white logo" src="img/siww_logo-white.png" alt="SWII"></a>-->
+        <!--</span>-->
+
+    </div>
+</footer>
+<script>
+
+    mollweide = new L.Proj.CRS('ESRI:54009',
+        '+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m no_defs',
+        {
+            resolutions: [43690, 32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]}
+    );
+
+
+    var map = L.map("mymap", {zoomControl: false, scrollWheelZoom: false}).setView([1.290270, 103.851959], 8);
+
+    var map2 = L.map("mymap2", {zoomControl: false, scrollWheelZoom: false}).fitBounds([
+        [49.3, -138.5],
+        [22.8, -67.4]
+    ]);
+    var map3 = L.map("mymap3", {zoomControl: false, scrollWheelZoom: false}).fitBounds([
+        [49.3, -138.5],
+        [22.8, -67.4]
+    ]);
+
+    //var map4= L.map("mymap4", {zoomControl: false, scrollWheelZoom: false}).setView([40.11, -99.58],5);
+
+    var map4 = L.map('mymap4', {
+        zoomControl: false, scrollWheelZoom: false,
+        crs: mollweide,  // 19. assign the custom crs to the crs option. change the zoom levels due to the change of projection.
+        center: [0, 0],
+        zoom: 1,
+        maxZoom: 1,
+        minZoom: 1,
+        detectRetina: true
+    });
+
+
+    var colors = chroma.scale("YlOrRd").mode('lab').colors(5);
+    var bcolors = chroma.scale("YlOrRd").mode('lab').colors(10);
+    var rcolors = chroma.scale("set1").mode('lab').colors(40);
+
+
+    for (i = 0; i < 5; i++) {
+        $('head').append($("<style> .marker-color-" + (i + 1).toString() + " { color: " + colors[i] + "; font-size: 30px; opacity: 0.8;text-shadow: 0 0 3px #ffffff;} </style>"));
+    }
+
+    for (i = 0; i < 6; i++) {
+        $('head').append($("<style> .button-" + (i + 1).toString() + " { background-color: " + chroma(bcolors[i]).alpha(0.5).css() + ";} </style>"));
+    }
+
+
+    for (i = 0; i < 5; i++) {
+        $('head').append($("<style> .comment-color-" + (i).toString() + " { color: " + colors[i] + "; font-size: 15px; opacity: 0.5;} </style>"));
+    }
+
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {
+        maxZoom: 19
+    }).addTo(map);
+
+
+    L.tileLayer('assets/dark/{z}/{x}/{y}.png', {
+        maxZoom: 5,
+        tms: true,
+    }).addTo(map2);
+
+
+    L.tileLayer('assets/dark/{z}/{x}/{y}.png', {
+        maxZoom: 5,
+        tms: true,
+    }).addTo(map3);
+
+
+
+
+    var swiiIcon = L.icon({
+        iconUrl: 'img/siww_logo.png',
+        iconSize: [247, 81], // size of the icon
+        iconAnchor: [80, 25]// point from which the popup should open relative to the iconAnchor
+    });
+
+    var cwiIcon = L.icon({
+        iconUrl: 'img/cws-logo-black.png',
+        iconSize: [318, 76], // size of the icon
+        iconAnchor: [160, 45]// point from which the popup should open relative to the iconAnchor
+    });
+
+    var pwbIcon = L.icon({
+        iconUrl: 'img/new-logo.png',
+        iconSize: [65.4, 39], // size of the icon
+        iconAnchor: [20, 20]// point from which the popup should open relative to the iconAnchor
+    });
+
+    var pwbbaseIcon = L.icon({
+        iconUrl: 'img/new-logo.png',
+        iconSize: [87.2, 52], // size of the icon
+        iconAnchor: [20, 20]// point from which the popup should open relative to the iconAnchor
+    });
+    L.marker([45.514685, -122.987080], {icon: cwiIcon}).addTo(map);
+    L.marker([1.290270, 103.851959], {icon: swiiIcon}).addTo(map);
+
+    L.marker([45.505374, -122.978524], {icon: pwbbaseIcon}).addTo(map2);
+
+    var layergroup2 = L.layerGroup().addTo(map2);
+
+    var layergroup4 = L.layerGroup().addTo(map4);
+
+    $(".leaflet-control").hide();
+
+
+    L.geoJson.ajax("assets/data/pwb-partners.geojson", {
+        pointToLayer: function (feature, latlng) {
+            var id = 0;
+            if (feature.properties.year === 2014) {
+                id = 0;
+            }
+            else if (feature.properties.year === 2015) {
+                id = 1;
+            }
+            else if (feature.properties.year === 2016) {
+                id = 2;
+            }
+            else if (feature.properties.year === 2017) {
+                id = 3;
+            }
+            else {
+                id = 4;
+            }
+            return L.marker(latlng, {icon: L.divIcon({className: 'fas fa-beer marker-color-' + (id + 1).toString()})});
+        }
+    }).addTo(map3);
+
+    L.geoJson.ajax("assets/data/oceans.geojson", {
+        style: {
+            fillColor: '#c5fffa',
+            fillOpacity: 0.2,
+            weight: 0,
+            opacity: 0.1,
+            color: '#7dfffa'
+        }
+
+    }).addTo(map4);
+
+
+    L.geoJson.ajax("assets/data/earth-lakes-10km.geojson", {
+        style: {
+            fillColor: '#c5fffa',
+            fillOpacity: 0.2,
+            weight: 0,
+            opacity: 0.1,
+            color: '#7dfffa'
+        }
+
+    }).addTo(map4);
+
+    L.geoJson.ajax("assets/data/earth-rivers-10km.geojson", {
+        style: {
+            fillColor: '#c5fffa',
+            fillOpacity: 0.2,
+            weight: 1,
+            opacity: 0.1,
+            color: '#7dfffa'
+        }
+
+    }).addTo(map4);
+
+
+    ws = new WebSlides();
+    ws.el.addEventListener('ws:slide-change', function () {
+
+        crtDiv = $(".current div");
+
+        // if ($(".current").has("[class*='leaflet']").length) {
+        if (crtDiv.attr("id") === "mymap") {
+            map.invalidateSize();
+            map.setView([45.514685, -122.987080], 9);
+            <!--get geojson to come up at earlier zoom level)-->
+            map.flyTo([1.290270, 103.851959], 10, {animate: true, duration: 23});
+            L.geoJson.ajax("assets/data/washington.geojson", {
+                style: {
+                    fillColor: '#b4b4b4',
+                    fillOpacity: 0.4,
+                    weight: 3,
+                    opacity: 0.6,
+                    color: '#000000',
+                    dashArray: '10'
+                }
+            }).addTo(map);
+        }
+
+
+        if (crtDiv.attr("id") === "mymap2") {
+
+            map2.fitBounds([
+                [49.3, -138.5],
+                [22.8, -67.4]
+            ]);
+            map2.invalidateSize();
+            layergroup2.clearLayers();
+
+            for (let i = 0; i < kits.features.length; i++) {
+
+                setTimeout(function () {
+                    lng = kits.features[i].geometry.coordinates[0];
+                    lat = kits.features[i].geometry.coordinates[1];
+
+                    layergroup2.addLayer(L.swoopyArrow([45.505374, -122.978524], [lat, lng], {
+                        labelFontSize: 12,
+                        iconAnchor: [20, 10],
+                        iconSize: [30, 16],
+                        //color: '#fff20f',
+                        color: rcolors[i],
+                        opacity: 0.7,
+                        weight: '3'
+                    }));
+                    layergroup2.addLayer(L.marker([lat, lng], {icon: pwbIcon}));
+
+                }, 400 * i);
+            }
+            layergroup2.addTo(map2);
+        }
+
+
+        if (crtDiv.attr("id") === "mymap3") {
+
+            map3.fitBounds([
+                [49.3, -138.5],
+                [22.8, -67.4]
+            ]);
+
+            map3.invalidateSize();
+            for (let i = 0; i < 5; i++) {
+
+                $(".marker-color-" + (i + 1).toString()).hide();
+                $("#year_partners").text((i + 2014).toString());
+            }
+
+            for (let i = 0; i < 5; i++) {
+
+                setTimeout(function () {
+                    $(".marker-color-" + (i + 1).toString()).show();
+
+                    $("#year_partners").text((i + 2014).toString());
+
+                }, 1500 * i);
+
+            }
+
+        }
+
+        //CvS edits for Scene 5 water storage chart
+
+        var chart = bb.generate({
+            data:{
+                x: "Time",
+                json: lake,
+                keys: {
+                    value: ["STRG2013", "STRG2014","STRG2015","STRG2016", "yearAVG", "Time"],
+                }
+            },
+            point: {
+                show: false
+            },
+            axis: {
+                x: {
+                    type: "timeseries",
+                    tick: {
+                        format: "%e %b"
+                    }
+                }
+            },
+            bindto: "#chart"
+        });
+
+        chart.data.colors({
+            "STRG2013": "#9bd3eb",
+            "STRG2014": "#0494bc",
+            "STRG2015": "#fadb1d",
+            "STRG2016": "#9c8912",
+            "yearAVG": "#ffffff"
+        });
+        chart.axis.labels({
+            x: "Month",
+            y: "Water Storage in Acre-Feet"
+        });
+        chart.data.names({
+            "STRG2013": "2013",
+            "STRG2014": "2014",
+            "STRG2015": "2015",
+            "STRG2016": "2016",
+            "yearAVG": "5 year average"
+        });
+
+        if (crtDiv.attr("id") === "chart-section") {
+
+        }
+
+        //End section for CVS edits
+
+
+
+        if (crtDiv.find("figure div").attr("id") === "mymap4") {
+            map4.setView([0, 0], 1);
+            map4.invalidateSize();
+
+            layergroup4.clearLayers();
+
+            for (let i = 0; i < media.features.length; i++) {
+
+                setTimeout(function () {
+                    lng = media.features[i].geometry.coordinates[0];
+                    lat = media.features[i].geometry.coordinates[1];
+
+
+                    layergroup4.addLayer(L.marker([lat, lng], {icon: L.divIcon({className: 'fas fa-comments comment-color-' + (i % 3).toString()})}));
+
+                }, 200 * i);
+            }
+            layergroup4.addTo(map4);
+
+
+            var verbiage = ["Quality, not history", "Water purification", "Proven technologies","Sewage to brewage","Solve water shortages",
+            "Purification technique", "High purity water system", "Most pure water on the planet", "beyond drinking water standards",
+            "Innovative solutions to water resuse", "All water we drink has at one point been consumed – and will be consumed again", "Pure Water Brew"];
+
+
+
+
+            for (let i = 0; i < verbiage.length; i++) {
+
+                setTimeout(function () {
+                    $("#vc")
+                        .empty()
+                        .append('<h2>  ' + verbiage[i] + ' </h2>');
+                }, 2000 * i);
+            }
+
+
+
+
+
+        }
+
+
+
+        if (crtDiv.attr("id") === "worduniverse") {
+            $("#worduniverse")
+                .empty()
+                .append('<canvas id="canvas2d"></canvas>');
+            new StarField('worduniverse').render(40, 3);
+        }
+
+        if (crtDiv.attr("id") === "worduniverse2") {
+            $("#worduniverse2")
+                .empty()
+                .append('<canvas id="canvas2d"></canvas>');
+            new StarField('worduniverse2').render(20, 3);
+        }
+
+
+    });
+
+
+
+</script> <!-- Autoslide? window.ws = new WebSlides({ autoslide: 8000 }); -->
+</body>
+</html>
