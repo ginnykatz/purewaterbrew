@@ -1,0 +1,620 @@
+/* Oregon State brand colors
+
+	--Beaver-Orange: #DC4405;
+	--Paddletail-Black: #000000;
+	--Bucktooth-White: #FFFFFF;
+	--Stratosphere: #006A8E;
+	--Moondust: #C6DAE7;
+	--Till: #B7A99A;
+*/
+/* Stratum 2 Web Bold */
+@font-face 
+{
+	font-family: 'Stratum2WebBold';
+	src: url('/fonts/Stratum2WebBold/Stratum2WebBold.eot');
+	src: url('/fonts/Stratum2WebBold/Stratum2WebBold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Stratum2WebBold/Stratum2WebBold.woff2') format('woff2'),
+         url('/fonts/Stratum2WebBold/Stratum2WebBold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+body 
+{
+	background-image: none;
+	background-color: #FFFFFF; /* Bucktooth-white */
+    font-family: 'Open sans',sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	min-height: 100%;	
+}
+h1,h2,h3,h4,h5,h6
+{
+	font-family: 'Stratum2WebBold', sans-serif;
+    color: #DC4405; /* Beaver-Orange */
+}
+h1
+{
+    font-size: 3rem;
+}
+h2
+{
+    font-size: 2.75rem;
+}
+h3
+{
+    font-size: 2.5rem;
+}
+h4
+{
+    font-size: 2.25rem;
+}
+a 
+{
+	color: #006A8E; /* Stratosphere */
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus 
+{
+	color: #006A8E; /* Stratosphere */
+	text-decoration: none;
+}
+li.spaced 
+{
+	padding-bottom: 1rem;
+}
+#osu-top
+{
+	background: #DC4405; /* Beaver-Orange */
+	height: 80px;
+	border-bottom: none;
+	position: relative;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+#osu-top img
+{
+    height: 60px;
+    margin: 10px;
+	vertical-align: top;
+}
+h1.college
+{
+    font-family: 'Open sans',sans-serif;
+    font-size: 2.16rem;
+	font-weight: 900;
+    line-height: 27px;
+    color: #FFFFFF; /* Bucktooth-white */
+    background-color: #000000; /* Paddletail-Black */
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+	display: block;
+}
+a.college
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	font-weight: 900;
+	font-size: 2.16rem;
+	text-decoration: none;
+}
+a.college:hover, a.college:focus
+{
+	text-decoration: underline;
+}
+.mobile-header
+{
+	padding-left: 15px;
+}
+.group-header
+{
+	display: block;
+	background: #FFFFFF; /* Bucktooth-white */
+	margin-top: 0;
+	padding-top: 8px;
+	padding-left: 15px;
+}
+#mobile-icon-menu
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	text-decoration: none;
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 60px;
+	background: transparent;
+	z-index: 300;
+}
+i.fa-bars
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	text-decoration: none;
+	display: inline;
+	cursor: pointer;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	vertical-align: baseline;
+	margin-top: 0;
+}
+i#mobile-search-icon
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	text-decoration: none;
+	display: inline;
+	cursor: pointer;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	vertical-align: baseline;
+	margin-top: 0;
+}
+a.m-icon-link
+{
+	padding: 7px 10px 4px 8px;
+	color: #FFFFFF; /* Bucktooth-white */
+	text-decoration: none;
+}
+i.fa-bars:hover
+{
+	color: #000000; /* Paddletail-Black */
+	text-decoration: none;
+}
+i#search-icon
+{
+	color: #FFFFFF; /* Bucktooth-white */
+}
+a#search-link
+{
+	color: #FFFFFF; /* Bucktooth-white */ 
+	text-decoration: none;
+	display: block;
+	position: absolute;
+	top: 28px; 
+	right: 20px;
+	background: transparent;
+	z-index: 300;
+	outline: 0;
+}
+i#search-icon:hover
+{
+	color: #000000; /* Paddletail-Black */
+}
+#search
+{
+	background: rgba(0,0,0,0.86);
+	height: 40em;
+	padding-top: 4em;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 999;
+	text-align: center;
+	display: none;
+}
+#mobile-menu 
+{
+	background: #000000; /* Paddletail-Black */ /* was #373737 */
+	height: 40em;
+	padding-top: 1.5em;
+	padding-left: 0;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 999;
+	text-align: left;
+	display: none;
+}
+#mobile-menu li 
+{
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 16px;
+	margin-right: 20px;
+	color: #FFFFFF; /* Bucktooth-white */
+}
+#mobile-menu a
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	text-decoration: none;
+}
+#mobile-bottom
+{
+    padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+	background: #000000; /* Paddletail-Black */ /* was #1b1b1b */
+}
+ul#mobile-bottom-menu
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+	display: block;
+	text-align: center;
+}
+#mobile-bottom-menu li
+{
+	display: inline-block;
+	width: 18.2%;
+	padding: 0;
+	text-align: center;
+	vertical-align: top;
+	list-style: none;
+	line-height: 20px;
+	margin: 0 auto;	
+}
+#mobile-bottom-menu i
+{
+    font-size: 40px;
+    line-height: 35px;
+    color: #B7A99A; /* Till */ /* was #acacac */
+	text-align: center	
+}
+#mobile-bottom-menu a
+{
+	font-size: 12px;
+	padding-bottom: 0;
+	margin: 0 auto;
+	line-height: 12px;
+	display: block;
+}
+#footer
+{
+	background: #272727 url("/images/repeatable-treeline.png") repeat-x scroll left bottom;	
+	border-top: 3px solid #DC4405; /* Beaver-Orange */
+    font-family: 'Open sans',sans-serif;
+	color: #FFFFFF; /* Bucktooth-white */
+	min-height: 300px;
+	padding-top: 5px;
+	padding-left: 15px;
+}
+#footer h2
+{
+	margin-bottom: .5rem;
+	font-family: 'Stratum2WebBold', sans-serif;
+	font-size: 2.0rem;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+#footer p
+{
+	font-family: inherit;
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.6;
+	color: inherit;
+	margin-top: 1.5rem;
+}
+#footer a
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	text-decoration: underline;
+	outline: 0;	
+}
+#footer a:hover, #footer a:focus, #footer a:active, #footer a:visited
+{
+	text-decoration: none;
+	background-color: transparent;
+	outline: 1;	
+}
+.c-cap h1
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	font-weight: bold;
+}
+.c-cap a
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	outline: 0;
+}
+.c-cap a:hover, .c-cap a:focus, .c-cap a:active, .c-cap a:visited
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	background-color: transparent;
+	outline: 0;
+}
+ul.list-no-bullets
+{
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	text-indent: -1.8em;		
+}
+li.list-no-bullets
+{
+	margin-left: 0;
+	padding-left: 0;
+}
+#menu-bar
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#menu-bar ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+#menu-bar li
+{
+	color: #000000; /* Paddletail-Black */
+	display: inline-block;
+
+}
+#menu-bar a
+{
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000000; /* Paddletail-Black */
+	padding: 10px 1vw;
+	border: none;
+	outline: 0;
+}
+#menu-bar a:hover, #menu-bar a:focus, #menu-bar a:active
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	background-color: #000000; /* Paddletail-Black */
+	outline: 1;
+}
+#sub-menu-bar
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#sub-menu-bar ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#sub-menu-bar li
+{
+    font-family: 'Open sans',sans-serif;
+	color: #000000; /* Paddletail-Black */
+	display: inline-block;
+}
+#sub-menu-bar a
+{
+	font-size: 16px;
+	text-transform: none;
+	text-decoration: none;
+	color: #000000; /* Paddletail-Black */
+	padding: 10px 0.7vw;
+	border: none;
+	outline: 0;
+}
+#sub-menu-bar a:hover, #sub-menu-bar a:focus, #sub-menu-bar a:active
+{
+	color: #FFFFFF; /* Bucktooth-white */
+	background-color: #000000; /* Paddletail-Black */
+	outline: 1;
+}
+#content-home
+{
+	width: 90vw;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 4px; 
+	padding-bottom: 4px;
+	
+}
+div.main-intro
+{
+	background-color: #C6DAE7; /* Moondust */
+	font-size: larger;
+	margin-top: 0.5em;
+	padding-top: 1em;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-bottom: 0.5em;
+}
+div.caption-container
+{
+	float: left;
+	position: relative; 
+}
+div.caption-box
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #000000; /* Paddletail-Black */
+	font-size: 15px;
+	color: #FFFFFF; /* Bucktooth-white */
+	opacity: 0.6;  /* transparency */
+	filter: alpha(opacity=60); /* IE transparency */
+}
+p.caption-text
+{
+	padding: 5px;
+	margin: 0px;
+}
+.highlight
+{
+	width: 30vw;
+	display: block;	
+	float: left;
+	margin-bottom: 10px;
+}
+.highlight-item
+{
+	margin: 0 auto;
+	width: 250px;
+}
+div.bigger-highlight-caption-box
+{
+	width: 300px;
+	background-color: #000000; /* Paddletail-Black */
+	font-size: 15px;
+	color: #FFFFFF; /* Bucktooth-white */
+}
+div.bigger-highlight-text
+{
+	width: 300px;
+	margin-bottom: 0.5em;
+}
+h1.page-name
+{
+	font-size: 3rem;
+	margin-top: 0;
+}
+a.page-name
+{
+	text-decoration: none;
+}
+h2.page-subtitle
+{
+	font-size: 2.25rem;
+}
+h3.page-subtitle
+{
+	font-size: 2rem;
+}
+div#academic-programs
+{
+	width: 280px;
+}
+ul.directory-groups
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.directory-groups li
+{
+	text-indent: -1em;
+	padding-left: 1em;
+	padding-bottom: 4px;
+
+}
+img.profile-picture
+{
+	margin-bottom: 15px;
+}
+div.marketing-panel-container
+{
+	width: 100%;
+	height: 403px;
+	border-bottom: 3px solid #C6DAE7; /* Moondust */
+	background-size: cover;
+}
+div.marketing-panel-text
+{
+	float: left;
+	height: 400px;
+	width: 330px;
+	padding: 1em;
+	padding-top: 5em;
+	background-color: #000000; /* Paddletail-Black */
+	color: #FFFFFF; /* Bucktooth-white */
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+h1.marketing-panel-heading
+{
+	font-size: xx-large;
+}
+p.marketing-panel-paragraph
+{
+	font-weight: bold;
+	font-size: larger;
+}
+.shaded-slide-title
+{
+	display:inline-block;background-color:#B7A99A;opacity:0.80; /* Till */
+}
+.shaded-slide-indicators
+{
+	width:12%;left:74%;background-color:#B7A99A;opacity:0.80; /* Till */
+}	
+.topspace
+{
+	margin-top: 20px;
+}
+.sidebar
+{
+	background-color: #C6DAE7; /* Moondust */
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+@media (min-width: 480px) and (max-width: 767px)
+{
+	#osu-top
+	{
+		height: 100px;
+	}
+	#osu-top img
+	{
+		height: 80px;
+	}
+	a#search-link
+	{
+		top: 35px;
+		right: 20px;
+	}
+	#mobile-icon-menu
+	{
+		top: 40px;
+	}	
+	.mobile-header
+	{
+		display: none;
+	}
+	#footer h2
+	{
+		font-size: 2.5rem;
+	}
+	h2.page-subtitle
+	{
+		font-size: 2.5rem;
+	}
+}
+@media (min-width: 768px)
+{
+	#osu-top
+	{
+		height: 100px;
+	}
+	#osu-top img
+	{
+		height: 80px;
+	}
+	a#search-link
+	{
+		top: 35px;
+		right: 20px;
+	}
+	.mobile-header
+	{
+		display: none;
+	}
+	h1.page-name
+	{
+		font-size: 3.5rem;
+	}
+	#footer h2
+	{
+		font-size: 2.5rem;
+	}
+	h2.page-subtitle
+	{
+		font-size: 2.5rem;
+	}
+	div#highlights
+	{
+		max-width: 840px;
+	}
+	div#academic-programs
+	{
+		width: 560px;
+	}
+}

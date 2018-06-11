@@ -229,6 +229,7 @@
         <source src="assets/intro.mp4" type="video/mp4">
         </video>
         <div class="wrap"><h1>Preparing for the New Normal</h1></div>
+
         </section>
 
         <!--4. Leader & Catalyst to a water smart society*****ADD HAGG LAKE DATA VIZ******-->
@@ -399,6 +400,8 @@
                 <i class="arrow-color fas fa-angle-right"></i>
                 <button class="button-6">Good Public Policy</button>
                 <h2> Public Perception</h2>
+                <h4>Word data from Social Media Analysis</h4>
+                <p>Talking About Water (Slovic, et al 2014)</p>
             </div>
         </section>
 
@@ -673,6 +676,15 @@
             <div class="wrap alignleft fadeInUp">
                 <h2>A Hoppy Experience</h2>
                 <h4>Sharing the local passion.</h4>
+                <br>
+                <p></p>
+                <h6>Featured Local Brewers</h6>
+                <p><a href="https://www.facebook.com/mcpolanderstaproom/">McPolanders Taproom </a><br>
+                    <a href="https://www.cleanwaterservices.org/newsroom/2016/2016-pure-water-brew-competition-winners-turn-former-sewage-to-brewage/">2016 PWB winner, Steve Woods </a><br>
+
+
+                Lee Hedgemen of <a href="https://brewpublic.com/uncategorized/ladies-of-lagers-ales/"> Ladies of Lagers & Ales</a>
+                </p>
             </div>
             <!-- .end .wrap -->
         </section>
@@ -709,10 +721,10 @@
             <div class="wrap content-left alignleft fadeInUp">
                 <h2 class><strong>Special Thanks </strong></h2>
                 <p>Dr. Bo Zhao- Contributing Partner</p>
-                <p>Brian Katz- Contributing Partner</p>
+                <p>Brian Katz- Support Team</p>
                 <p>Giovanni Svevo- Support Team </p>
                 <p>Chunxue Xue- Language Support Team</p>
-                <p>Rick Debbout-Data Support</p>
+                <p>Rick Debbout- Data Support</p>
             </div>
             <!-- .end .wrap -->
         </section>
@@ -812,7 +824,9 @@
 
 
     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiemhhb2JvIiwiYSI6ImNqMGdpM2RjNDAyMzQzMnJ1d3FuZmF0NnQifQ.yoQP0NDS5F8ePKjaS3EJgQ', {
-        maxZoom: 19
+        maxZoom: 19,
+        attribution: "<a href='assets/license.txt'>Mapbox Light</a>",
+        detectRetina:true,
     }).addTo(map);
 
 
@@ -1117,68 +1131,136 @@
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h2 class="modal-title">About the Authors</h2>
+                <h2 class="modal-title">About</h2>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <!--avatar images, names, and share links-->
-                    <div class="col-12">
-                        <!--Ginny-->
-                        <div class="row">
-                            <!--avatar image-->
-                            <div class="col-2">
-                                <img class="alignright img-thumbnail img-responsive" src="assets/img/ginny.svg"
-                                     alt="Ginny Katz">
-                            </div>
-                            <!--name and share links-->
-                            <div class="col-10">
-                                <!--Name-->
-                                <div class="row names alignleft">
-                                    <div class="col-12">
-                                        <p><a href="www.linkedin.com/in/virginiakatz">Ginny Katz</a></p>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                        <!--Courtney-->
-                        <div class="row">
-                            <!--avatar image-->
-                            <div class="col-2">
-                                <img class="alignright img-thumbnail img-responsive" src="assets/img/courtney.png"
-                                     alt="Courtney Van Stolk">
-                            </div>
-                            <!--name and share links-->
-                            <div class="col-10">
-                                <!--name-->
-                                <div class="row names alignleft">
-                                    <div class="col-12">
-                                        <p><a href="#">Courtney Van Stolk</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Aradia-->
-                        <div class="row">
-                            <!--avatar image-->
-                            <div class="col-2">
-                                <img class="alignright img-thumbnail img-responsive" src="assets/img/aradia.png"
-                                     alt="Aradia Farmer">
-                            </div>
-                            <!--name and share links-->
-                            <div class="col-10">
-                                <!--name-->
-                                <div class="row names alignleft">
-                                    <div class="col-12">
-                                        <p><a href="#">Aradia Farmer</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <h6 class="modal-content aligncenter">  This story map describes the story of <img class="flex-content" src="assets/img/logo-2.png">  a beer made from purified, local effluent, and the journey of <a href="https://www.cleanwaterservices.org/">  Clean Water Services  </a>     of Hillsboro, OR.</h6>
+                <p class="aligncenter"><Small>  This Geog 4572 presentation was reformatted from the original product that was created for Clean Water Service's presentation for
+                    <a href="https://www.siww.com.sg/">  Singapore International Water Week. </a>     In this version, we highlight the different data displays and story telling methods our team created to convey the Pure Water Brew conversation.</small> </p>
+            <div class="modal-body">
+                <!--<h5 class="aligncenter"> The Authors</h5>-->
+                <!--<div class="row">-->
+                    <!--&lt;!&ndash;avatar images, names, and share links&ndash;&gt;-->
+                    <!--<div class="col-12">-->
+                        <!--&lt;!&ndash;Ginny&ndash;&gt;-->
+                        <!--<div class="row">-->
+                            <!--&lt;!&ndash;avatar image&ndash;&gt;-->
+                            <!--<div class="col-2">-->
+                                <!--<img class="alignright img-thumbnail img-responsive" src="assets/img/ginny.png"-->
+                                     <!--alt="Ginny Katz">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;name and share links&ndash;&gt;-->
+                            <!--<div class="col-10">-->
+                                <!--&lt;!&ndash;Name&ndash;&gt;-->
+                                <!--<div class="row names alignleft">-->
+                                    <!--<div class="col-12">-->
+                                        <!--<p><a href="www.linkedin.com/in/virginiakatz">Ginny Katz</a> <small>  Client Whisperer | Media Manager</small></p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="row names alignleft">-->
+                                    <!--<div class="col-12">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;Courtney&ndash;&gt;-->
+                        <!--<div class="row">-->
+                            <!--&lt;!&ndash;avatar image&ndash;&gt;-->
+                            <!--<div class="col-2">-->
+                                <!--<img class="alignright img-thumbnail img-responsive" src="assets/img/courtney.png"-->
+                                     <!--alt="Courtney Van Stolk">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;name and share links&ndash;&gt;-->
+                            <!--<div class="col-10">-->
+                                <!--&lt;!&ndash;name&ndash;&gt;-->
+                                <!--<div class="row names alignleft">-->
+                                    <!--<div class="col-12">-->
+                                        <!--<p><a href="#">Courtney Van Stolk</a><small>    Data Diva</small></p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;Aradia&ndash;&gt;-->
+                        <!--<div class="row">-->
+                            <!--&lt;!&ndash;avatar image&ndash;&gt;-->
+                            <!--<div class="col-2">-->
+                                <!--<img class="alignright img-thumbnail img-responsive" src="assets/img/aradia.png"-->
+                                     <!--alt="Aradia Farmer">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;name and share links&ndash;&gt;-->
+                            <!--<div class="col-10">-->
+                                <!--&lt;!&ndash;name&ndash;&gt;-->
+                                <!--<div class="row names alignleft">-->
+                                    <!--<div class="col-12">-->
+                                        <!--<p><a href="#">Aradia Farmer</a><small>     Word Wizard</small></p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--&lt;!&ndash;Bo&ndash;&gt;-->
+                        <!--<div class="row">-->
+                            <!--<p class="mode">Special Thanks to</p>-->
+                            <!--&lt;!&ndash;avatar image&ndash;&gt;-->
+                            <!--<div class="col-2">-->
+                                <!--<img class="alignright img-thumbnail img-responsive" src="assets/img/zhao.jpg"-->
+                                     <!--alt="Aradia Farmer">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;name and share links&ndash;&gt;-->
+                            <!--<div class="col-10">-->
+                                <!--&lt;!&ndash;name&ndash;&gt;-->
+                                <!--<div class="row names alignleft">-->
+                                    <!--<div class="col-12">-->
+                                        <!--<p><a href="#">Dr. Bo Zhao</a><small>   Data Display Guru</small></p>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
                     </div>
+
+                <br>
+                <h5 class="alignleft content-center">Data Sources:</h5>
+                <ol>
+                <li><small>
+                Photos and Footage courtesy of Clean Water Services </small>
+                </li>
+                    <li><small>
+                        Hagg Lake Data courtesy of Clean Water services, display formatted by Courtney Van Stolk </small>
+                    </li>
+                    <li><small>Social Media Data courtesy of Clean Water services, word clouds formatted by Aradia Farmer, word universes formatted by <a href="https://github.com/jakobzhao"> Dr. Bo Zhao</a></small> </li></ol>
+                <!--<h5>References:</h5>-->
+                <!--<ol>-->
+                <!--<li>-->
+                <!--<a href="http://www.co.lincoln.or.us/sheriff" target="_blank">Lincoln County Sherriff's Office</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="https://www.oregon.gov/gov/policy/orr/Pages/cascadia.aspx" target="_blank">Oregon Emergency Management</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="https://www.oregon.gov/OEM/Pages/default.aspx" target="_blank">Oregon Emergency Management</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="https://www.oregon.gov/OEM/Pages/default.aspx" target="_blank">Oregon Emergency Management</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p>-->
+                <!--<a href="https://www.oregon.gov/oem/Documents/Oregon_Resilience_Plan_Final.pdf" target="_blank">Oregon Resilience PLan</a>-->
+                <!--</p>-->
+                <!--</li>-->
+
+                <!--</ol>-->
+                <h5>Attributions:</h5>
+                <p><a href="https://github.com/jakobzhao/storymap/">storymap.js</a><br>
+                <a href="https://github.com/webslides/WebSlides">WebSlides by Antonio-Laguna</a><br>
+                This story map uses the <a href="" target="_blank">Mapbox Light style</a> base map built with <a href="https://www.mapbox.com/">Mapbox</a>.</p>
+
+                <p><a href="http://geoviz.ceoas.oregonstate.edu/">OSU Cartography and Geovisualization</a> | <a href="https://www.oregonstate.edu/">Oregon State University</a></p>
+
                 </div>
+
             </div>
+</div>
             <!--<div class="modal-body">-->
                 <!--<h4>This story map describes Ginny Katz's MPH graduate internship with Lincoln County Sherriff's office. </h4>-->
                 <!--<h5>Completed: April 2017- August 2017</h5>-->

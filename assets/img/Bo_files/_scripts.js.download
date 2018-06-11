@@ -1,0 +1,54 @@
+! function($) {
+    $(document).ready(function() {
+
+        /* Search toggles */
+        $(".toggle-search").click(function(event) {
+            event.preventDefault();
+            if ($("#search").is(":hidden")) {
+                $("#search").slideDown();
+                $("#search .searchbox").focus();
+
+            } else {
+                $("#search").slideUp();
+            }
+        });
+
+        $("#search .close-search").click(function() {
+            $("#search").slideUp();
+        });
+		
+        /* Mobile menu toggles */
+        $(".toggle-mobile-menu").click(function(event) {
+            event.preventDefault();
+            if ($("#mobile-menu").is(":hidden")) {
+                $("#mobile-menu").slideDown();
+            } else {
+                $("#mobile-menu").slideUp();
+            }
+        });
+
+        /* Tab Menu Interactions */
+        $('.tab-menu > a').click(function(event) {
+            event.preventDefault();
+            $('.tab-menu > a').removeClass('active');
+            $(this).addClass('active');
+            var story = $(this).attr("href");
+            $(".story-wrapper > div").removeClass('active');
+            $(story).addClass('active');
+        });
+
+        /* Toggle main menu */
+        $('.toggle-mobile-menu').click(function(e) {
+            e.preventDefault();
+            if ($("#block-homepage-main-menu").hasClass('hidden-md-down')) {
+                $(".main-menu").addClass('nav-stacked');
+                $('#block-homepage-main-menu').removeClass('hidden-md-down');
+            } else {
+                $(".main-menu").removeClass('nav-stacked');
+                $('#block-homepage-main-menu').addClass('hidden-md-down');
+            }
+        });
+
+    });
+}(jQuery);
+;

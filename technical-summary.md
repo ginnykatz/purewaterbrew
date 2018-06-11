@@ -2,8 +2,7 @@
 **Ginny Katz** | **Courtney van Stolk** | **Aradia Farmer** 
 
 ## Project Description and Goals
-How do you sell Oregon greywater to an audience in Singapore? Even if the greywater is packaged as a tempting beer call Pure Water Brew?
-Dr. Bo Zhao's client, Clean Water Services, is sending a representative to Singapore International Water Week at the end of June. Our project supports this presentation and will also be an online product displayed on Clean Water Services' website.
+    How do you sell Oregon greywater to an audience in Singapore? Even if the greywater is packaged as a tempting beer call Pure Water Brew? Clean Water Services is sending a representative to Singapore International Water Week 2018. Our project supports this presentation and will also be an online product displayed on Clean Water Services' website.
 
 ## Technical Summary
 ### Header
