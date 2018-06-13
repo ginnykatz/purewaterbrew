@@ -5,7 +5,29 @@
     How do you sell Oregon greywater to an audience in Singapore? Even if the greywater is packaged as a tempting beer call Pure Water Brew? Clean Water Services is sending a representative to Singapore International Water Week 2018. Our project supports this presentation and will also be an online product displayed on Clean Water Services' website.
 
 ## Technical Summary
+This story map presentation uses [webslides.js](https://github.com/webslides/WebSlides)  by Antonio-Laguna. For a full detail of the the different options for displaying your content, check out [https://github.com/webslides/WebSlides/blob/master/demos/portfolios.html](portflio)   . You'll want to start by cloning the Webslides.js repository, featuring :
+
+- Navigation (horizontal and vertical sliding): remote presenters, touchpad, keyboard shortcuts, and swipe.
+- Slide counter.
+- Permalinks: go to a specific slide.
+- Autoslide.
+- Click to nav.
+- **Simple CSS alignments. Put content wherever you want (vertical centering...)** 
+- 40+ components: background images/videos, quotes, cards, covers...
+- Flexible blocks with auto-fill and equal height.
+- Fonts: Roboto, Maitree (Serif), and San Francisco.
+- Vertical rhythm (use multiples of 8).
+
+Credits: 
+
+- WebSlides was created by [@jlantunez](https://twitter.com/jlantunez) using [Cactus](https://github.com/eudicots/Cactus).
+- Javascript: [@Belelros](https://twitter.com/Belelros) and [@LuisSacristan](https://twitter.com/luissacristan).
+- Based on [SimpleSlides](https://github.com/jennschiffer/SimpleSlides), by [@JennSchiffer](https://twitter.com/jennschiffer).
+
+
+
 ### Header
+
 After loading the standard title/UTC/data type header, we loaded the CSS stylesheets that define our presentation:
 ```html
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">-->
@@ -221,15 +243,21 @@ The chart displays data on water levels in Hagg Lake, and was created using ```B
         }
 ```
 
-## Sketch
+## Sketch and Design Scheme
+
+![storyline](assets/storyline/overview.png)
 
 ## Design Scheme
 
+Clean Water Services had great media they wanted to share to help give visual context to their international audience. The client also asked for innovative ways to share word data that would be more engaging than a list. 
+
+
+
 ## Data Sources
 
-For water storage data at Hagg Lake (a.k.a. Scoggins Reservoir), I turned to the Bureau of Land Management’s Pacific Northwest Hydromet Historical Data Access portal. 
+For water storage data at Hagg Lake (a.k.a. Scoggins Reservoir), we turned to the Bureau of Land Management’s Pacific Northwest Hydromet Historical Data Access portal. 
 <https://www.usbr.gov/pn-bin/inventory.pl?site=SCO&ui=true&interval=daily>
-I downloaded data for 2012-2013, added it into an Excel file, and calculated a five-year average. I then created a chart that showed water storage volumes in acre-feet in the lake for 2013-2016 and the 5-year average
+We downloaded data for 2012-2013, added it into an Excel file, and calculated a five-year average. I then created a chart that showed water storage volumes in acre-feet in the lake for 2013-2016 and the 5-year average
 
 Videos in presentation: Footage was provided by Clean Water Services.
 
