@@ -1,7 +1,8 @@
+Geovisual Analytics
+
 **Title** 
 
-“Changing  the conversation with the Pure
-Water Brew Challenge to create a shift in Mindset”
+"Changing Conversations | Changing Minds"
 
  
 
@@ -16,16 +17,18 @@ Aradia Farmer
 
 **Supporting contributors**
 
-Rick Debbout,
+Bo Zhao
 Brian Katz,
 Chunxue Xu ,
 Giovanni Svevo
+
+Rick Debbout
 
 
 
 **Client**:
 
-Clean Water Services, Hillsboro Oregon 
+[Clean Water Services](https://www.cleanwaterservices.org/), Hillsboro Oregon 
 
 
 
@@ -34,11 +37,9 @@ Clean Water Services, Hillsboro Oregon
 
 Mock up: By 4/4/18
 
-Presentation to CWS for feedback opportunity : May 25th
+Project Deadline : June 11th 1:00 pm 
 
-Project Soft Deadline : June 20th
 
-Project Hard Deadline: June 25th 8:00 am 
 
 
 
@@ -47,22 +48,15 @@ Project Hard Deadline: June 25th 8:00 am
 **Motives**
 
 
-This story map aims to engage an audience in the story of Pure Water Brew and
-the evolving conversation surrounding water reuse. Based on the actions of Clean
-Water Services in Hillsboro Oregon, this engagement tool will be used as presentation
-support in the International Singapore Water Week 2018 and will further serve
-as a website extension for the Clean Water Services Website. 
+This story map aims to engage an audience in the story of Pure Water Brew and the evolving conversation surrounding water reuse. Based on the actions of Clean Water Services in Hillsboro Oregon, this engagement tool will be used as presentation support in the International Singapore Water Week 2018 and will further serve as a website extension for the Clean Water Services Website. 
 
 
 
 **Project Description**
 
 
-This multimedia story map will use the video template for of Dr. Zhao’s story
-map examples, located at [link]. This story map will include interactive maps,
-videos, images, graphic design, D3 Geovisual analytics (Heatmaps, Twitter Word
-Clouds, Hexagonal Cholopleth Map). These charts and data displays will mainly
-focus on the changing conversation surrounding Pure Water Brew and water reuse.
+This presentation uses Webslides.js [https://github.com/webslides/WebSlides]. This story map will include interactive maps,
+videos, images, graphic design, D3 Geovisual analytics . These charts and data displays will mainly focus on using beer the changing conversation surrounding water reuse.
 
 
 
@@ -74,10 +68,7 @@ Clean Water Services
 [https://www.cleanwaterservices.org/about-us/one-water/our-watershed/maps-data/]
 -Contextual, Media, Images and Videos (located on the Google Drive under
 Materials File)  https://drive.google.com/drive/u/1/folders/1OD7OQSwnomdQ2crfATzmJVq1JkCUhChK
--Water Sampling (Sourced from CWS directly)
-Oregon State University 
--2014 Climate data
-NDH flowlines
+
 
  
 
