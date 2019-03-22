@@ -4,7 +4,7 @@ Geovisual Analytics
 
 "Changing Conversations | Changing Minds"
 
- 
+ Live link: https://ginnykatz.github.io/purewaterbrew/
 
 **Group members**
 
@@ -19,11 +19,6 @@ Aradia Farmer
 
 Bo Zhao
 Brian Katz,
-Chunxue Xu ,
-Giovanni Svevo
-
-Rick Debbout
-
 
 
 **Client**:
@@ -31,13 +26,8 @@ Rick Debbout
 [Clean Water Services](https://www.cleanwaterservices.org/), Hillsboro Oregon 
 
 
-
 **Project Deadlines**
 
-
-Mock up: By 4/4/18
-
-Project Deadline : June 11th 1:00 pm 
 
 
 
@@ -89,4 +79,3 @@ The interface intends to be engaging, educational, and approachable with the und
 
 
 
-![storyline](img/story-overview.png)
